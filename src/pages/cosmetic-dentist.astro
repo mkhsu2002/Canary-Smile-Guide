@@ -1,54 +1,51 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import Layout from '../layouts/BlogPost.astro';
+// Note: Using blog_1 as a temporary placeholder due to AI generation limits.
+import HeroImage from '../assets/blog_1.png';
 ---
 
-<LandingPage title="Cosmetic Dentist in Surrey | Veneers & Whitening | Canary Smile Guide" description="Transform your smile with professional cosmetic dentistry in Surrey. We offer safe teeth whitening, porcelain veneers, and complete smile makeovers.">
-	<div class="hero">
-		<h1>Cosmetic Dentist in Surrey: Transform Your Smile</h1>
-		<p class="intro">
-			Your smile is often the first thing people notice about you. A bright, beautiful smile can significantly boost your self-confidence in both personal and professional settings. At Canary Dental in Surrey, we blend art and science to provide exceptional cosmetic dentistry. Whether you want to erase years of coffee stains with professional whitening or completely redesign your teeth with custom porcelain veneers, we can tailor a treatment plan to achieve your aesthetic goals.
-		</p>
-	</div>
+<Layout
+	title="Cosmetic Dentist in Surrey | Teeth Whitening & Veneers"
+	description="Enhance your smile with professional cosmetic dentistry in Surrey. We offer professional teeth whitening, porcelain veneers, and complete smile makeovers."
+	pubDate={new Date('2026-04-29')}
+	heroImage={HeroImage}
+>
+	<h2>Design the Smile of Your Dreams</h2>
+	<p>
+		Your smile is often the first thing people notice about you. If chipped, stained, or misaligned teeth are holding you back, Canary Dental Clinic offers premium <strong>Cosmetic Dentistry</strong> services designed to boost your confidence and create a stunning, natural-looking aesthetic.
+	</p>
 
-	<section class="content-section">
-		<h2>Our Cosmetic Dental Services</h2>
-		<p>We believe that cosmetic enhancements should look entirely natural and complement your unique facial features.</p>
-		<ul>
-			<li><strong>Professional Teeth Whitening:</strong> Achieve a noticeably brighter smile safely and quickly. Unlike over-the-counter strips, our professional-grade whitening treatments penetrate deep into the enamel to lift stubborn stains caused by coffee, tea, wine, or smoking, without causing extreme sensitivity.</li>
-			<li><strong>Porcelain Veneers:</strong> Thin, custom-crafted porcelain shells permanently bonded to the front of your teeth. Veneers are the ultimate solution for fixing chipped, severely discolored, slightly crooked, or unevenly spaced teeth, giving you a flawless "Hollywood" smile.</li>
-			<li><strong>Dental Bonding:</strong> A quick, cost-effective alternative to veneers for repairing minor chips or gaps using a tooth-colored composite resin.</li>
-			<li><strong>Complete Smile Makeovers:</strong> A comprehensive, customized plan that may combine several treatments (such as Invisalign, whitening, and veneers) to completely rejuvenate your smile.</li>
-		</ul>
-	</section>
+	<h3>Our Cosmetic Dental Services</h3>
+	<p>
+		We combine artistry with advanced dental science to deliver beautiful results.
+	</p>
+	<ul>
+		<li><strong>Professional Teeth Whitening:</strong> Achieve a smile several shades brighter in just one visit. Our clinical-grade whitening treatments are safer and far more effective than over-the-counter strips.</li>
+		<li><strong>Porcelain Veneers:</strong> Thin, custom-crafted porcelain shells that cover the front surface of your teeth to instantly correct chips, gaps, or severe discoloration.</li>
+		<li><strong>Dental Bonding:</strong> A quick and cost-effective way to repair minor chips or close small gaps using tooth-colored composite resin.</li>
+		<li><strong>Invisalign Clear Aligners:</strong> Subtly straighten your teeth without metal brackets. <a href="/invisalign-braces">Learn more about Invisalign</a>.</li>
+	</ul>
 
-	<section class="content-section">
-		<h2>Frequently Asked Questions</h2>
-		<div class="faq">
-			<details>
-				<summary>Is professional teeth whitening safe for my enamel?</summary>
-				<p>Yes, when performed or supervised by a dentist, teeth whitening is extremely safe. We ensure the bleaching agent is applied correctly, protecting your gums and preserving your enamel.</p>
-			</details>
-			<details>
-				<summary>How long do porcelain veneers last?</summary>
-				<p>With proper care and good oral hygiene, high-quality porcelain veneers can last 10 to 15 years, or even longer. They are highly resistant to stains compared to natural teeth.</p>
-			</details>
-			<details>
-				<summary>Will my insurance or the CDCP cover cosmetic dentistry?</summary>
-				<p>No. Purely cosmetic procedures, such as whitening and veneers, are elective and are generally not covered by the CDCP or standard private dental insurance plans. We can discuss flexible payment options during your consultation.</p>
-			</details>
-		</div>
-	</section>
+	<h3>The Smile Makeover Process</h3>
+	<p>
+		Every great smile begins with a plan. During your cosmetic consultation, we will discuss your goals, take digital photographs, and evaluate your oral health. We can often provide digital mock-ups so you can preview your new smile before any treatment begins!
+	</p>
 
-	<div class="cta-container">
-		<h2>Ready to Love Your Smile?</h2>
-		<p>Take the first step toward the confident smile you deserve.</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book a Cosmetic Consultation</a>
-	</div>
+	<h3>Frequently Asked Questions</h3>
+	<details>
+		<summary>Is cosmetic dentistry covered by insurance or CDCP?</summary>
+		<p>No, treatments performed purely for aesthetic reasons (like teeth whitening or veneers) are not covered by the <a href="/cdcp-dentist">Canadian Dental Care Plan (CDCP)</a> or most private insurance plans. However, treatments that also restore function (like a crown for a broken tooth) may have partial coverage.</p>
+	</details>
+	<details>
+		<summary>Does teeth whitening damage enamel?</summary>
+		<p>When performed by a dental professional, teeth whitening is completely safe and does not damage your enamel. You may experience temporary tooth sensitivity, but this subsides quickly.</p>
+	</details>
 
-	<section class="content-section">
-		<h2>Related Services</h2>
-		<ul>
-			<li><a href="/invisalign-braces">Want to straighten your teeth first? Explore Invisalign.</a></li>
-		</ul>
-	</section>
-</LandingPage>
+	<h3>Ready to Shine?</h3>
+	<p>
+		Transform your look and your self-esteem. Contact our <a href="/mandarin-speaking-dentist">bilingual Surrey team</a> to book your cosmetic consultation today.
+	</p>
+	<p style="text-align:center;">
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em;">Book Your Cosmetic Consultation</a>
+	</p>
+</Layout>

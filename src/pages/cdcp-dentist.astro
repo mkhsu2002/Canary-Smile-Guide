@@ -1,66 +1,54 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import Layout from '../layouts/BlogPost.astro';
+import HeroImage from '../assets/service_cdcp.png';
 ---
 
-<LandingPage title="CDCP Dentist in Surrey | Canadian Dental Care Plan | Canary Smile Guide" description="Eligible for the CDCP? Our Surrey dental clinic proudly accepts the Canadian Dental Care Plan. Book your appointment for covered cleanings, fillings, and more.">
-	<div class="hero">
-		<h1>CDCP Dentist in Surrey: Maximizing Your Dental Benefits</h1>
-		<p class="intro">
-			The Canadian Dental Care Plan (CDCP) is a transformative government initiative designed to help eligible Canadians access essential dental care. As a participating CDCP dentist in Surrey, Canary Dental is committed to helping you understand your coverage, navigate the system, and receive the high-quality care you deserve without the heavy financial burden. Whether you need a routine cleaning, a cavity filled, or a tooth extraction, our knowledgeable team is here to guide you every step of the way.
-		</p>
-	</div>
+<Layout
+	title="CDCP Dentist in Surrey, BC"
+	description="Canary Dental is a proud provider for the Canadian Dental Care Plan (CDCP). Learn how to use your benefits for cleanings, fillings, and more at our Surrey clinic."
+	pubDate={new Date('2026-04-29')}
+	heroImage={HeroImage}
+>
+	<h2>Your Trusted CDCP Provider in Surrey</h2>
+	<p>
+		The <strong>Canadian Dental Care Plan (CDCP)</strong> is a fantastic government initiative designed to lower dental costs for eligible Canadians. At Canary Dental Clinic, we are proud to be an officially registered CDCP provider, ensuring that our community receives the high-quality care they deserve without the financial stress.
+	</p>
 
-	<section class="content-section">
-		<h2>What Services Are Covered Under the CDCP?</h2>
-		<p>The CDCP covers a broad spectrum of essential oral health services aimed at preventing and treating dental issues. While specific coverage can vary based on individual eligibility, covered services generally include:</p>
-		<ul>
-			<li><strong>Preventive Services:</strong> Comprehensive dental exams, scaling (cleaning), polishing, and digital X-rays to catch problems early.</li>
-			<li><strong>Restorative Services:</strong> Amalgam and composite (white) fillings to treat cavities and restore tooth function.</li>
-			<li><strong>Oral Surgery:</strong> Tooth extractions, including problematic wisdom teeth.</li>
-			<li><strong>Endodontic Services:</strong> Root canal treatments to save severely infected teeth.</li>
-			<li><strong>Prosthodontic Services:</strong> Complete and partial removable dentures (pre-authorization may be required).</li>
-		</ul>
-		<p>For the most accurate and up-to-date information regarding eligibility criteria and application processes, please refer to the official <a href="https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html" target="_blank" rel="noopener noreferrer">Government of Canada CDCP Website</a>.</p>
-	</section>
+	<h3>What Services Are Covered Under CDCP?</h3>
+	<p>
+		The CDCP covers a wide range of essential dental services. Depending on your eligibility, the plan may cover:
+	</p>
+	<ul>
+		<li><strong>Preventative Care:</strong> Exams, X-rays, and <a href="/dental-cleaning">professional dental cleanings</a>.</li>
+		<li><strong>Restorative Services:</strong> Dental fillings to treat cavities.</li>
+		<li><strong>Oral Surgery:</strong> Tooth extractions, including <a href="/wisdom-tooth-extraction">wisdom tooth removal</a>.</li>
+		<li><strong>Endodontics:</strong> Root canal treatments for infected teeth.</li>
+		<li><strong>Periodontics:</strong> Deep scaling for gum disease.</li>
+	</ul>
 
-	<section class="content-section">
-		<h2>Your CDCP Visit: What to Expect</h2>
-		<p>We strive to make using your CDCP benefits as seamless as possible. When you book an appointment with us, simply mention that you are a CDCP patient. On the day of your visit, please bring your Sun Life CDCP member card and a valid piece of government-issued ID. Our administrative team will submit the claims directly to Sun Life on your behalf, so you only need to worry about your oral health.</p>
-	</section>
+	<h3>How to Use Your CDCP Benefits at Canary Dental</h3>
+	<ol>
+		<li><strong>Step 1: Check Eligibility.</strong> Ensure you have received your welcome letter and Sun Life CDCP card.</li>
+		<li><strong>Step 2: Book Your Appointment.</strong> Contact our clinic. Let us know you are a CDCP patient.</li>
+		<li><strong>Step 3: Bring Your Documents.</strong> Bring your Sun Life CDCP card and a valid piece of ID to your appointment.</li>
+		<li><strong>Step 4: Receive Care.</strong> We will bill Sun Life directly. You are only responsible for your specific co-payment (if applicable).</li>
+	</ol>
 
-	<section class="content-section">
-		<h2>Frequently Asked Questions About CDCP</h2>
-		<div class="faq">
-			<details>
-				<summary>Will I have to pay anything out of pocket?</summary>
-				<p>It depends on your adjusted family net income. The CDCP may cover 70%, 80%, or 100% of the eligible costs based on established fee guides. If your coverage is less than 100%, you will be responsible for the remaining co-payment portion. We always provide a clear estimate before starting any treatment.</p>
-			</details>
-			<details>
-				<summary>Does the CDCP cover cosmetic dentistry like teeth whitening?</summary>
-				<p>No. The CDCP is designed for essential oral health care. Purely cosmetic procedures, such as teeth whitening or veneers, are not covered under the plan.</p>
-			</details>
-			<details>
-				<summary>I just received my CDCP card. How soon can I book an appointment?</summary>
-				<p>You can book an appointment immediately, provided that your coverage start date (indicated in your welcome package from Sun Life) has already passed. Contact us today to schedule your visit.</p>
-			</details>
-			<details>
-				<summary>Can you explain my CDCP benefits to me in Mandarin?</summary>
-				<p>Yes, absolutely. Our <a href="/mandarin-speaking-dentist">Mandarin-speaking team</a> is fully trained on the CDCP framework and can explain your coverage, co-payments, and treatment plans clearly in Chinese.</p>
-			</details>
-		</div>
-	</section>
+	<h3>Frequently Asked Questions</h3>
+	<details>
+		<summary>Is everything 100% free with the CDCP?</summary>
+		<p>Not necessarily. Depending on your adjusted family net income, you may have a co-payment (e.g., 40%, 50%, or 60%). Additionally, if a specific treatment costs more than the CDCP established fees, patients may need to pay the difference. Our staff will always explain any out-of-pocket costs before beginning treatment.</p>
+	</details>
+	<details>
+		<summary>Do I still need my private employer insurance?</summary>
+		<p>If you have private insurance through your employer, you must use it as your primary coverage. The CDCP is designed to help those without access to private insurance. For a detailed comparison, read our guide on <a href="/blog/cdcp-vs-private-insurance-surrey">CDCP vs Private Dental Insurance</a>.</p>
+	</details>
 
-	<div class="cta-container">
-		<h2>Ready to Use Your CDCP Benefits?</h2>
-		<p>Don't let dental issues worsen. Use your CDCP benefits to achieve a healthy, pain-free smile.</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book Your CDCP Consultation via LINE</a>
-	</div>
-
-	<section class="content-section">
-		<h2>Related Articles & Resources</h2>
-		<ul>
-			<li><a href="/dental-cleaning">Learn about our Preventative Cleaning Services</a></li>
-			<li><a href="/blog">Read our latest CDCP guides on the blog</a></li>
-		</ul>
-	</section>
-</LandingPage>
+	<h3>Ready to Book?</h3>
+	<p>
+		Don't let your oral health wait. If your CDCP coverage has begun, contact our fluent <a href="/mandarin-speaking-dentist">English and Mandarin speaking team</a> to schedule your visit.
+	</p>
+	<p style="text-align:center;">
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em;">Book Your CDCP Appointment</a>
+	</p>
+</Layout>

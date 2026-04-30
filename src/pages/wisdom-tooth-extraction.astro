@@ -1,59 +1,56 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import Layout from '../layouts/BlogPost.astro';
+import HeroImage from '../assets/service_wisdom.png';
 ---
 
-<LandingPage title="Wisdom Tooth Extraction in Surrey | Emergency Dental Care | Canary Smile Guide" description="Experiencing jaw pain? Get safe and comfortable wisdom tooth extraction in Surrey. We provide expert oral surgery and emergency dental care.">
-	<div class="hero">
-		<h1>Wisdom Tooth Extraction in Surrey: Safe & Comfortable Care</h1>
-		<p class="intro">
-			Are you experiencing sudden jaw pain, swelling, or discomfort near the back of your mouth? Wisdom teeth (third molars) often cause trouble as they try to erupt, especially if there isn't enough room in your jaw. At Canary Dental in Surrey, our experienced dental team provides safe, comfortable, and efficient wisdom tooth extractions. We prioritize your comfort and offer immediate relief to protect your surrounding teeth from damage and infection.
-		</p>
-	</div>
+<Layout
+	title="Wisdom Tooth Extraction in Surrey | Emergency Dentist"
+	description="Experiencing wisdom tooth pain? Canary Dental offers safe, comfortable wisdom tooth extractions in Surrey with expert aftercare and sedation options."
+	pubDate={new Date('2026-04-29')}
+	heroImage={HeroImage}
+>
+	<h2>Safe and Comfortable Wisdom Tooth Removal</h2>
+	<p>
+		Wisdom teeth (the third molars) are the last teeth to erupt, usually appearing in your late teens or early twenties. Unfortunately, most jaws do not have enough room to accommodate them, leading to pain, infection, or crowding. At Canary Dental in Surrey, we provide expert <strong>Wisdom Tooth Extractions</strong> in a calm, controlled environment.
+	</p>
 
-	<section class="content-section">
-		<h2>Signs You Might Need an Extraction</h2>
-		<p>Not all wisdom teeth need to be removed. If they grow in fully and straight, they can be kept. However, you should schedule an evaluation if you experience any of the following symptoms:</p>
-		<ul>
-			<li><strong>Severe Pain or Throbbing:</strong> Deep aching in the jaw near the back of your mouth.</li>
-			<li><strong>Swollen or Bleeding Gums:</strong> Redness, tenderness, or a bad taste around the eruption site (pericoronitis).</li>
-			<li><strong>Difficulty Chewing or Opening Your Mouth:</strong> Stiffness in the jaw joint.</li>
-			<li><strong>Impacted Teeth:</strong> The tooth is growing at an angle and pushing against your other molars, potentially causing them to shift or decay.</li>
-		</ul>
-	</section>
+	<h3>Signs You Might Need an Extraction</h3>
+	<p>
+		Not all wisdom teeth need to be removed, but you should schedule an evaluation if you experience any of the following symptoms:
+	</p>
+	<ul>
+		<li><strong>Severe Pain or Throbbing:</strong> At the back of your mouth.</li>
+		<li><strong>Swollen, Red, or Bleeding Gums:</strong> Around the eruption site.</li>
+		<li><strong>Jaw Stiffness:</strong> Difficulty opening your mouth or chewing.</li>
+		<li><strong>Bad Breath or Bad Taste:</strong> Caused by bacteria trapped around a partially erupted tooth.</li>
+	</ul>
 
-	<section class="content-section">
-		<h2>Frequently Asked Questions</h2>
-		<div class="faq">
-			<details>
-				<summary>Does getting a wisdom tooth pulled hurt?</summary>
-				<p>Your comfort is our top priority. We use potent local anesthesia to completely numb the area, ensuring you don't feel any pain during the procedure—only some pressure. For anxious patients, we also offer sedation options to help you relax.</p>
-			</details>
-			<details>
-				<summary>What is a "Dry Socket" and how do I prevent it?</summary>
-				<p>A dry socket occurs when the blood clot that forms in the extraction site is dislodged prematurely, exposing the bone and nerves. To prevent it, strictly avoid drinking through a straw, smoking, or vigorous rinsing for at least 72 hours after your surgery. We will provide you with a comprehensive post-operative care sheet.</p>
-			</details>
-			<details>
-				<summary>How long is the recovery after a wisdom tooth extraction?</summary>
-				<p>Most patients recover completely within a few days to a week. You may experience some swelling and mild discomfort for the first 48 hours, which can be managed with ice packs and prescribed or over-the-counter pain medication. We recommend eating soft foods like yogurt and soup during the first few days.</p>
-			</details>
-			<details>
-				<summary>Is tooth extraction covered by insurance or the CDCP?</summary>
-				<p>Yes, most private dental insurance plans and the CDCP cover basic and surgical tooth extractions. Our staff will help you submit a pre-determination to confirm exactly what your plan covers before we proceed.</p>
-			</details>
-		</div>
-	</section>
+	<h3>Our Extraction Process</h3>
+	<p>
+		We understand that oral surgery can be intimidating. Our priority is your comfort and safety.
+	</p>
+	<ol>
+		<li><strong>Digital X-Rays:</strong> We take a panoramic X-ray to see the exact position of the tooth roots relative to your nerves.</li>
+		<li><strong>Anesthesia:</strong> We use strong local anesthesia so you feel no pain during the procedure—only pressure. (Ask us about sedation options if you are anxious).</li>
+		<li><strong>Gentle Removal:</strong> The tooth is carefully extracted. If it is impacted (stuck under the gum), a small incision may be made.</li>
+		<li><strong>Aftercare Instructions:</strong> We provide you with detailed instructions and a care package to ensure rapid healing and prevent dry socket.</li>
+	</ol>
 
-	<div class="cta-container">
-		<h2>Don't Ignore Dental Pain</h2>
-		<p>Untreated impacted wisdom teeth can lead to serious infections. Contact us immediately for an emergency evaluation.</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Contact Us for an Exam</a>
-	</div>
+	<h3>Frequently Asked Questions</h3>
+	<details>
+		<summary>What should I eat after having a tooth pulled?</summary>
+		<p>Stick to soft, cool foods for the first 24-48 hours. Yogurt, applesauce, mashed potatoes, and smoothies are excellent. Avoid using a straw, as the suction can dislodge the blood clot and cause a painful condition called dry socket.</p>
+	</details>
+	<details>
+		<summary>Is tooth extraction covered by the CDCP?</summary>
+		<p>Yes, standard and complicated tooth extractions are generally covered under the <a href="/cdcp-dentist">Canadian Dental Care Plan (CDCP)</a>. Pre-authorization may be required for severe impactions, which our front desk will handle for you.</p>
+	</details>
 
-	<section class="content-section">
-		<h2>Learn More</h2>
-		<ul>
-			<li><a href="/dental-implants">Need a missing tooth replaced? Learn about Implants.</a></li>
-			<li><a href="/blog">Foods to eat after a tooth extraction</a></li>
-		</ul>
-	</section>
-</LandingPage>
+	<h3>Don't Wait in Pain</h3>
+	<p>
+		Dental infections can spread quickly. If you are in pain, contact our clinic immediately for an emergency evaluation. Our <a href="/mandarin-speaking-dentist">bilingual team</a> is here to help.
+	</p>
+	<p style="text-align:center;">
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em;">Book an Emergency Exam</a>
+	</p>
+</Layout>

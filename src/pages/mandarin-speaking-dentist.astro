@@ -1,56 +1,51 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import Layout from '../layouts/BlogPost.astro';
+// Note: Using blog_2 as a temporary placeholder due to AI generation limits.
+import HeroImage from '../assets/blog_2.png';
 ---
 
-<LandingPage title="Mandarin-speaking Dentist in Surrey | 素里中文牙醫 | Canary Smile Guide" description="Looking for a Mandarin-speaking dentist in Surrey? We provide clear communication in English and Chinese. 素里中文牙醫推薦，新移民與長輩看牙首選。">
-	<div class="hero">
-		<h1>Mandarin-speaking Dentist in Surrey | 素里中文牙醫</h1>
-		<p class="intro">
-			Finding a dentist who speaks your native language can make a massive difference in your comfort and understanding of complex medical treatments. At Canary Dental in Surrey, we are proud to feature a dedicated team of Mandarin-speaking (中文牙醫) dental professionals. We are committed to serving the local Chinese and Taiwanese community, ensuring that nothing gets lost in translation. 
-			<br><br>
-			<strong>素里中文牙醫推薦！</strong>我們深知在異鄉看牙的焦慮與不安。在 Canary Dental，我們提供全中文的諮詢、看診與保險解說服務，讓新移民與長輩看牙不再有語言障礙，安心享受高品質的醫療服務。
-		</p>
-	</div>
+<Layout
+	title="Mandarin Speaking Dentist in Surrey | 素里中文牙醫"
+	description="尋找素里 (Surrey) 的中文牙醫？Canary Dental 提供全中文溝通的洗牙、植牙與 CDCP 諮詢服務，讓您看診無障礙、安心又放心。"
+	pubDate={new Date('2026-04-29')}
+	heroImage={HeroImage}
+>
+	<h2>素里專業中文牙醫診所 (Mandarin-Speaking Dental Clinic)</h2>
+	<p>
+		在異國他鄉，醫療術語往往是最難跨越的語言障礙。我們深知，當涉及您的健康、治療方案與保險費用時，使用您最熟悉的母語進行溝通，才能帶來真正的安心感。
+	</p>
+	<p>
+		<strong>Canary Dental Clinic</strong> 位於 BC 省 Surrey，我們擁有專業的<strong>全中文醫療團隊（提供流利國語/普通話服務）</strong>。從前台預約、保險諮詢，到醫師的療程解說，我們確保您在每一個環節都能 100% 了解自己的口腔狀況與治療選擇。
+	</p>
 
-	<section class="content-section">
-		<h2>為什麼選擇我們的中文牙醫團隊？ (Why Choose Us?)</h2>
-		<p>Clear communication is the foundation of trust and excellent healthcare.</p>
-		<ul>
-			<li><strong>無語言障礙 (No Language Barrier):</strong> 從您踏入診所的那一刻起，無論是櫃台預約、填寫病歷、X光片解說，到最終的治療計畫與費用說明，我們全程提供流利的中文服務，確保您 100% 了解自己的口腔狀況。</li>
-			<li><strong>新移民友善 (Immigrant Friendly):</strong> 加拿大的牙科保險體系與亞洲不同，我們熟悉各類私人保險機制，並能協助新移民快速適應。</li>
-			<li><strong>CDCP 專家 (CDCP Experts):</strong> 我們不僅是 CDCP 合作診所，更能用中文為您詳細解說這項新政策的給付範圍、自費比例與申請流程，確保您充分享有政府福利。</li>
-			<li><strong>LINE 線上諮詢 (Convenient LINE Support):</strong> 我們提供台灣人最習慣的 LINE 官方帳號進行線上預約與初步問題解答，溝通更即時、更方便。</li>
-		</ul>
-	</section>
+	<h3>我們提供的全方位中文服務</h3>
+	<ul>
+		<li><strong>詳細的療程解說：</strong> 醫師會親自用中文為您解釋 X 光片、目前的牙齒問題，以及建議的治療方案，絕不強迫推銷。</li>
+		<li><strong>加拿大牙醫保險與 CDCP 諮詢：</strong> 加拿大的保險制度對新移民來說十分複雜。我們的前台人員會用中文協助您查詢您的私人保險額度，或是解說 <a href="/cdcp-dentist">加拿大聯邦牙科保險 (CDCP)</a> 的理賠規範。</li>
+		<li><strong>無痛洗牙與常規檢查：</strong> 專業洗牙、補牙與定期的口腔健康檢查。</li>
+		<li><strong>進階牙科手術：</strong> 包括安全拔智齒 (<a href="/wisdom-tooth-extraction">Wisdom Tooth Extraction</a>) 與高階植牙 (<a href="/dental-implants">Dental Implants</a>)。</li>
+	</ul>
 
-	<section class="content-section">
-		<h2>常見問題 (Frequently Asked Questions)</h2>
-		<div class="faq">
-			<details>
-				<summary>你們可以幫忙申請或解說 CDCP 嗎？ (Can you explain CDCP in Mandarin?)</summary>
-				<p>可以的！我們知道 CDCP 的規定相當繁雜。只要您符合資格並收到 Sun Life 的通知信，您可以直接聯繫我們，我們的中文櫃台人員會協助您確認您的 CDCP 額度，並用中文清楚解說後續流程。</p>
-			</details>
-			<details>
-				<summary>長輩不會說英文，可以自己來看診嗎？ (Can my elderly parents come alone?)</summary>
-				<p>完全沒問題！這正是我們的優勢。長輩來診所後，會有會說中文的助理與醫師全程陪伴與解說，晚輩不需要特地請假陪同翻譯。</p>
-			</details>
-			<details>
-				<summary>How do I book an appointment in Mandarin?</summary>
-				<p>您可以直接點擊下方的 LINE 連結與我們的中文客服聯繫，或在營業時間致電診所並要求中文服務 (Please ask for a Mandarin speaker when you call)。</p>
-			</details>
-		</div>
-	</section>
+	<h3>為什麼選擇 Canary Dental？</h3>
+	<p>
+		我們致力於打造一個讓華人與新移民感到放鬆、信任的醫療環境。我們不只是治療牙齒，更希望成為您全家人的長期口腔健康顧問。無論您是剛來到溫哥華的新移民，還是已經定居多年的老朋友，我們都歡迎您。
+	</p>
 
-	<div class="cta-container">
-		<h2>需要中文牙醫服務嗎？ (Need a Mandarin Dentist?)</h2>
-		<p>讓語言不再是您追求健康牙齒的阻礙。</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">透過 LINE 與我們聯繫預約 (Book via LINE)</a>
-	</div>
+	<h3>常見問題 (FAQ)</h3>
+	<details>
+		<summary>請問診所有提供兒童牙科服務嗎？</summary>
+		<p>有的！我們非常歡迎小朋友。我們的醫師非常有耐心，會用輕鬆的方式引導孩子完成檢查，從小建立良好的看牙經驗。</p>
+	</details>
+	<details>
+		<summary>我剛拿到 CDCP 卡，但不知道怎麼用？</summary>
+		<p>請不用擔心。您只需要帶著您的 CDCP 卡片與身分證件來到診所，我們的中文前台人員會幫您查詢額度，並告訴您洗牙、補牙等項目是否有自付額。</p>
+	</details>
 
-	<section class="content-section">
-		<h2>實用資訊 (Useful Resources)</h2>
-		<ul>
-			<li><a href="/cdcp-dentist">了解更多關於 CDCP 的資訊</a></li>
-		</ul>
-	</section>
-</LandingPage>
+	<h3>立即預約中文看診</h3>
+	<p>
+		想要預約洗牙或諮詢植牙嗎？歡迎直接透過 LINE 與我們聯繫，我們將有專人用中文為您服務！
+	</p>
+	<p style="text-align:center;">
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em;">加 LINE 中文預約</a>
+	</p>
+</Layout>

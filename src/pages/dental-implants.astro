@@ -1,64 +1,55 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import Layout from '../layouts/BlogPost.astro';
+import HeroImage from '../assets/service_implants.png';
 ---
 
-<LandingPage title="Dental Implants in Surrey | Top Quality Straumann Implants | Canary Smile Guide" description="Restore your confident smile with permanent dental implants in Surrey. We specialize in Straumann BLX implants, bone grafting, and sinus lifts.">
-	<div class="hero">
-		<h1>Dental Implants in Surrey: Permanent Solutions for Missing Teeth</h1>
-		<p class="intro">
-			Living with missing teeth can impact everything from your confidence to your ability to enjoy your favorite foods. Dental implants are widely considered the gold standard for tooth replacement because they look, feel, and function just like natural teeth. At our Surrey dental clinic, we specialize in advanced implant dentistry, utilizing world-renowned implant systems like <strong>Straumann BLX</strong> to restore your smile securely and permanently.
-		</p>
-	</div>
+<Layout
+	title="Dental Implants in Surrey, BC | Restore Your Smile"
+	description="Replace missing teeth permanently with high-quality dental implants at Canary Dental Clinic in Surrey. Restore your ability to chew, speak, and smile with confidence."
+	pubDate={new Date('2026-04-29')}
+	heroImage={HeroImage}
+>
+	<h2>Permanent Solutions for Missing Teeth</h2>
+	<p>
+		Losing a tooth can affect more than just your appearance; it impacts your ability to chew, speak clearly, and feel confident in social situations. At Canary Dental Clinic in Surrey, we offer <strong>Dental Implants</strong>—the gold standard for replacing missing teeth. Implants look, feel, and function just like your natural teeth.
+	</p>
 
-	<section class="content-section">
-		<h2>Comprehensive Implant Services</h2>
-		<p>We provide start-to-finish implant care under one roof, ensuring consistent quality and a comfortable patient experience.</p>
-		<ul>
-			<li><strong>Single Tooth Implants:</strong> The ideal way to replace a single missing tooth. Unlike a traditional dental bridge, an implant does not require filing down the healthy adjacent teeth, preserving your natural tooth structure.</li>
-			<li><strong>Implant-Supported Bridges & Dentures:</strong> For patients missing multiple teeth, a few strategically placed implants can securely anchor a bridge or a full denture, eliminating the slipping and discomfort associated with traditional removable dentures.</li>
-			<li><strong>Guided Bone Regeneration (GBR) / Bone Grafting:</strong> If you have been missing a tooth for a while, your jawbone may have receded. We offer bone grafting procedures to rebuild bone density, creating a strong, stable foundation for your future implant.</li>
-			<li><strong>Sinus Lifts:</strong> When placing implants in the upper back jaw, there may not be enough bone height below the sinus cavity. A sinus lift safely raises the sinus floor to allow for successful implant placement.</li>
-		</ul>
-	</section>
+	<h3>What is a Dental Implant?</h3>
+	<p>
+		A dental implant is a small, biocompatible titanium post that is surgically placed into your jawbone. It acts as an artificial tooth root. Once the implant integrates with your bone (a process called osseointegration), a custom-made, highly aesthetic dental crown is attached to the top. The result is a seamless, permanent replacement tooth.
+	</p>
 
-	<section class="content-section">
-		<h2>Why We Trust Straumann BLX</h2>
-		<p>Not all dental implants are created equal. We proudly use the Swiss-engineered <a href="https://www.straumann.com/" target="_blank" rel="noopener noreferrer">Straumann implant system</a>, specifically the BLX line. Straumann is a global leader in implant dentistry, known for its exceptional clinical research, high success rates, and innovative surface technologies that promote faster, stronger integration with your jawbone.</p>
-	</section>
+	<h3>Why Choose Dental Implants?</h3>
+	<ul>
+		<li><strong>Preserves Bone Health:</strong> Unlike dentures or bridges, implants stimulate the jawbone, preventing bone loss and preserving your facial structure.</li>
+		<li><strong>Does Not Damage Adjacent Teeth:</strong> A traditional bridge requires grinding down healthy neighboring teeth. Implants are standalone restorations.</li>
+		<li><strong>Long-Lasting:</strong> With proper <a href="/dental-cleaning">dental hygiene</a>, an implant can last a lifetime.</li>
+		<li><strong>Natural Feel:</strong> You can eat your favorite foods without worrying about slipping dentures.</li>
+	</ul>
 
-	<section class="content-section">
-		<h2>Frequently Asked Questions</h2>
-		<div class="faq">
-			<details>
-				<summary>Does getting a dental implant hurt?</summary>
-				<p>Most patients are surprised by how little discomfort is involved. The procedure is performed under local anesthesia, so you will not feel pain during the surgery. Post-operative discomfort is typically mild and easily managed with over-the-counter pain relievers.</p>
-			</details>
-			<details>
-				<summary>How long does the dental implant process take?</summary>
-				<p>The entire process usually takes several months. After the implant post is placed in the jawbone, it needs time (typically 3-6 months) to fuse with the bone (osseointegration). Once healed, the custom crown is attached. If bone grafting is required, the timeline may be extended.</p>
-			</details>
-			<details>
-				<summary>How much do dental implants cost in Surrey?</summary>
-				<p>The cost varies based on several factors, including the number of implants needed, whether bone grafting or sinus lifts are required, and the type of final restoration. During your initial consultation, we will provide a comprehensive, transparent treatment plan with exact costs.</p>
-			</details>
-			<details>
-				<summary>Are dental implants covered by CDCP or private insurance?</summary>
-				<p>Typically, complex restorative work like dental implants is considered a major service and is not covered by the CDCP. Private dental insurance policies vary; some may cover a portion of the crown or the extraction. We offer flexible financing options to make this life-changing investment more affordable.</p>
-			</details>
-		</div>
-	</section>
+	<h3>The Implant Process at Canary Dental</h3>
+	<ol>
+		<li><strong>Comprehensive Consultation:</strong> We take 3D scans of your jaw to assess bone volume and plan the exact placement of the implant.</li>
+		<li><strong>Surgical Placement:</strong> The titanium post is gently placed into the jawbone under local anesthesia. (If bone grafting is needed, we will discuss this beforehand).</li>
+		<li><strong>Healing Period:</strong> We wait 3-6 months for the implant to securely fuse with your bone.</li>
+		<li><strong>Final Crown Placement:</strong> A custom-matched ceramic crown is permanently attached, completing your new smile.</li>
+	</ol>
 
-	<div class="cta-container">
-		<h2>Ready to Eat, Speak, and Smile with Confidence?</h2>
-		<p>Schedule your personalized implant consultation today to find out if dental implants are the right solution for you.</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book Your Implant Consultation</a>
-	</div>
+	<h3>Frequently Asked Questions</h3>
+	<details>
+		<summary>Are dental implants painful?</summary>
+		<p>Most patients report that the implant procedure is much less uncomfortable than a <a href="/wisdom-tooth-extraction">tooth extraction</a>. We use profound local anesthesia, and any post-operative discomfort is usually managed easily with over-the-counter pain medication.</p>
+	</details>
+	<details>
+		<summary>Does insurance or CDCP cover dental implants?</summary>
+		<p>Dental implants are generally considered a premium restorative option. The <a href="/cdcp-dentist">Canadian Dental Care Plan (CDCP)</a> currently does not cover dental implants. Many private insurances may cover the crown portion, but rarely the surgical implant. We offer transparent pricing and financing options to help make this life-changing treatment accessible.</p>
+	</details>
 
-	<section class="content-section">
-		<h2>Learn More</h2>
-		<ul>
-			<li><a href="/wisdom-tooth-extraction">Need an extraction first? Learn about our Oral Surgery services.</a></li>
-			<li><a href="/blog">Read our guide: Dental Implant vs. Dental Bridge</a></li>
-		</ul>
-	</section>
-</LandingPage>
+	<h3>Ready to Restore Your Smile?</h3>
+	<p>
+		Don't let a missing tooth hold you back. Schedule an implant consultation with our <a href="/mandarin-speaking-dentist">experienced team</a> today to see if you are a candidate.
+	</p>
+	<p style="text-align:center;">
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em;">Book Your Implant Consultation</a>
+	</p>
+</Layout>

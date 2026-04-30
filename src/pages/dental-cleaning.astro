@@ -1,56 +1,54 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import Layout from '../layouts/BlogPost.astro';
+import HeroImage from '../assets/service_cleaning.png';
 ---
 
-<LandingPage title="Dental Cleaning & Exam in Surrey | Canary Smile Guide" description="Keep your smile healthy with professional dental cleanings and comprehensive exams at Canary Dental in Surrey, BC. Gentle care for the whole family.">
-	<div class="hero">
-		<h1>Dental Cleaning & Exam in Surrey: Preventive Care for a Healthy Smile</h1>
-		<p class="intro">
-			Preventive care is the absolute foundation of long-term oral health. Even with diligent daily brushing and flossing, plaque and tartar can accumulate in hard-to-reach areas. At Canary Dental in Surrey, our gentle dental cleanings and thorough comprehensive exams are designed to help you avoid painful cavities, reverse early gum disease (gingivitis), and keep your teeth bright, strong, and healthy for life.
-		</p>
-	</div>
+<Layout
+	title="Dental Cleaning & Exam in Surrey, BC"
+	description="Experience gentle, thorough dental cleanings and comprehensive exams at Canary Dental in Surrey. Prevent cavities and maintain a healthy, bright smile."
+	pubDate={new Date('2026-04-29')}
+	heroImage={HeroImage}
+>
+	<h2>Preventative Care for a Lifelong Smile</h2>
+	<p>
+		A bright, healthy smile starts with strong foundations. At Canary Dental Clinic in Surrey, we believe that preventative care is the most important service we offer. Routine <strong>dental cleanings and comprehensive exams</strong> not only keep your teeth looking great but also prevent costly and painful dental emergencies in the future.
+	</p>
 
-	<section class="content-section">
-		<h2>What to Expect During Your Check-up</h2>
-		<p>We pride ourselves on making every check-up a comfortable, educational, and completely stress-free experience. A standard hygiene appointment includes:</p>
-		<ul>
-			<li><strong>Comprehensive Examination:</strong> Our dentists will carefully inspect your teeth for decay, check your existing fillings, and perform a routine oral cancer screening.</li>
-			<li><strong>Digital X-Rays:</strong> When necessary, we use low-radiation digital X-rays to see what is happening below the gumline and between the teeth.</li>
-			<li><strong>Professional Scaling & Polishing:</strong> Our skilled hygienists will gently remove hardened tartar (calculus) and plaque, finishing with a polish to remove surface stains caused by coffee or tea.</li>
-			<li><strong>Fluoride Treatment (Optional):</strong> A quick fluoride application helps remineralize enamel and make your teeth more resistant to acid attacks.</li>
-			<li><strong>Personalized Oral Hygiene Advice:</strong> We will provide actionable tips and recommend the best products to improve your daily brushing and flossing routine.</li>
-		</ul>
-	</section>
+	<h3>What to Expect During Your Dental Cleaning</h3>
+	<p>
+		Our skilled hygienists use a gentle touch to ensure your visit is completely comfortable, even if it has been a long time since your last visit.
+	</p>
+	<ul>
+		<li><strong>Scaling and Root Planing:</strong> We carefully remove plaque and hardened tartar (calculus) from above and below the gumline to prevent periodontal (gum) disease.</li>
+		<li><strong>Polishing:</strong> We gently polish your teeth to remove surface stains caused by coffee, tea, and daily life, leaving your teeth feeling incredibly smooth.</li>
+		<li><strong>Fluoride Treatment:</strong> A preventative fluoride application to strengthen your enamel and make your teeth more resistant to cavities.</li>
+	</ul>
 
-	<section class="content-section">
-		<h2>Frequently Asked Questions</h2>
-		<div class="faq">
-			<details>
-				<summary>How often should I get my teeth cleaned?</summary>
-				<p>The <a href="https://www.cda-adc.ca/" target="_blank" rel="noopener noreferrer">Canadian Dental Association</a> generally recommends a professional cleaning and exam every 6 months. However, if you have a history of periodontal (gum) disease, heavy tartar buildup, or are currently undergoing orthodontic treatment, we might suggest coming in every 3 to 4 months to maintain optimal health.</p>
-			</details>
-			<details>
-				<summary>Does getting your teeth cleaned hurt?</summary>
-				<p>For most patients, a dental cleaning is completely painless. If you have sensitive teeth or inflamed gums, let our hygienist know beforehand. We can use desensitizing pastes or adjust our techniques to ensure you remain totally comfortable.</p>
-			</details>
-			<details>
-				<summary>Does the CDCP or private insurance cover dental cleanings?</summary>
-				<p>Yes! Preventive services like scaling, polishing, and exams are standard benefits covered by the CDCP (for eligible patients) and almost all private extended health insurance plans. We handle the direct billing to make your visit hassle-free.</p>
-			</details>
-		</div>
-	</section>
+	<h3>The Comprehensive Dental Exam</h3>
+	<p>
+		After your teeth are sparkling clean, one of our experienced dentists will conduct a thorough examination. We use low-radiation digital X-rays to look for hidden cavities, assess bone health, and check for any signs of early oral cancer. 
+	</p>
 
-	<div class="cta-container">
-		<h2>Is It Time for Your 6-Month Check-up?</h2>
-		<p>Don't wait until you feel pain. Preventive care saves you time and money.</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book Your Cleaning & Exam Today</a>
-	</div>
+	<h3>Who Should Get a Dental Cleaning?</h3>
+	<p>
+		<strong>Everyone!</strong> The Canadian Dental Association recommends visiting the dentist at least twice a year. Whether you are an adult looking for a routine check-up, a parent bringing in your child, or a senior utilizing the <a href="/cdcp-dentist">CDCP</a>, preventative care is essential.
+	</p>
 
-	<section class="content-section">
-		<h2>Explore Further</h2>
-		<ul>
-			<li><a href="/cdcp-dentist">Check if you qualify for CDCP coverage</a></li>
-			<li><a href="/blog">How to brush properly: A step-by-step guide</a></li>
-		</ul>
-	</section>
-</LandingPage>
+	<h3>Frequently Asked Questions</h3>
+	<details>
+		<summary>Does a dental cleaning hurt?</summary>
+		<p>No, a routine dental cleaning should not hurt. If you have sensitive teeth or inflamed gums, let our hygienist know. We can apply numbing gel or adjust our techniques to ensure you are comfortable.</p>
+	</details>
+	<details>
+		<summary>Are cleanings covered by the Canadian Dental Care Plan (CDCP)?</summary>
+		<p>Yes, preventative services like exams, X-rays, and scaling (cleanings) are covered under the CDCP. Please read our <a href="/blog/does-cdcp-cover-cleaning-fillings">guide on CDCP coverage</a> for more details.</p>
+	</details>
+
+	<h3>Schedule Your Check-up Today</h3>
+	<p>
+		Protect your oral health and boost your confidence with a fresh, clean smile. Our <a href="/mandarin-speaking-dentist">bilingual team</a> is ready to welcome you.
+	</p>
+	<p style="text-align:center;">
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em;">Book Your Dental Cleaning</a>
+	</p>
+</Layout>
