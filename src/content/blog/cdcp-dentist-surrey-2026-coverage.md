@@ -2,7 +2,7 @@
 title: 'CDCP Dentist in Surrey: What Is Covered in 2026?'
 description: 'Learn about the 2026 updates to the Canadian Dental Care Plan (CDCP). Understand what is covered, co-payments, and how Canary Dental in Surrey can help you.'
 pubDate: '2026-04-29'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog_1.png'
 ---
 
 Are you wondering what the **Canadian Dental Care Plan (CDCP)** covers in 2026? As the program expands to include more eligible Canadians, understanding your benefits is crucial to maximizing your oral health without unexpected out-of-pocket costs.

@@ -2,7 +2,7 @@
 title: 'How to Use the Canadian Dental Care Plan at a Surrey Dental Clinic'
 description: 'Received your Sun Life CDCP card? Here is a step-by-step guide on how to successfully use your Canadian Dental Care Plan benefits at Canary Dental in Surrey.'
 pubDate: '2026-04-29'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/blog_2.png'
 ---
 
 Congratulations on being approved for the Canadian Dental Care Plan (CDCP)! This federal program is a fantastic step toward making oral healthcare more accessible. However, many patients feel confused about what to do next after receiving their welcome letter from Sun Life.

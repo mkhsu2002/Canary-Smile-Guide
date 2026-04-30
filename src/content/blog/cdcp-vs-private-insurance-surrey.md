@@ -2,7 +2,7 @@
 title: 'CDCP vs Private Dental Insurance: What Surrey Patients Should Know'
 description: 'Confused about the difference between the Canadian Dental Care Plan (CDCP) and private employer dental insurance? Learn how they compare and what it means for your wallet.'
 pubDate: '2026-04-29'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: '../../assets/blog_4.png'
 ---
 
 With the rollout of the Canadian Dental Care Plan (CDCP), many Surrey residents are asking: *"Should I cancel my private dental insurance?"* or *"How is the CDCP different from the benefits I get through my employer?"*
