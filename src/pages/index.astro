@@ -1,49 +1,55 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import LandingPage from '../layouts/LandingPage.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<LandingPage title="Dentist in Surrey, BC | Canary Smile Guide" description={SITE_DESCRIPTION}>
+	<div class="hero">
+		<h1>Dentist in Surrey, BC</h1>
+		<p class="intro">
+			Welcome to Canary Smile Guide. If you are looking for a gentle, family-friendly dentist in Surrey, BC, you have found the right place. We provide comprehensive dental care ranging from routine check-ups and cleanings to advanced dental implants and Invisalign. Our team speaks English and Mandarin to serve our diverse community.
+		</p>
+	</div>
+
+	<section class="content-section">
+		<h2>Our Dental Services</h2>
+		<p>We believe in transparent, stress-free dentistry. Whether you need a simple cleaning, wisdom tooth extraction, or are exploring CDCP coverage, our Surrey dental clinic is equipped to help.</p>
+		<ul>
+			<li><strong>Dental Implants:</strong> Permanent solutions for missing teeth using premium Straumann BLX implants.</li>
+			<li><strong>Orthodontics:</strong> Invisalign and traditional braces for both adults and children.</li>
+			<li><strong>General Care:</strong> Exams, cleanings, and CDCP-covered treatments.</li>
+		</ul>
+	</section>
+
+	<section class="content-section">
+		<h2>Frequently Asked Questions</h2>
+		<div class="faq">
+			<details>
+				<summary>Do you accept the new Canadian Dental Care Plan (CDCP)?</summary>
+				<p>Yes! We proudly accept CDCP patients in our Surrey clinic. Contact us to verify your coverage.</p>
+			</details>
+			<details>
+				<summary>Do you have Mandarin-speaking dentists?</summary>
+				<p>Absolutely. We have a dedicated team that speaks fluent Mandarin (中文牙醫) to ensure clear communication.</p>
+			</details>
+			<details>
+				<summary>Are you accepting new patients in Surrey?</summary>
+				<p>Yes, we are currently welcoming new patients and families.</p>
+			</details>
+		</div>
+	</section>
+
+	<div class="cta-container">
+		<h2>Ready for a Healthier Smile?</h2>
+		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book Your Consultation on LINE</a>
+	</div>
+
+	<section class="content-section">
+		<h2>Related Resources</h2>
+		<ul>
+			<li><a href="/cdcp-dentist">CDCP Dental Guide</a></li>
+			<li><a href="/mandarin-speaking-dentist">Mandarin-speaking Dentist Info</a></li>
+			<li><a href="/blog">Dental Care Blog</a></li>
+		</ul>
+	</section>
+</LandingPage>
