@@ -1,9 +1,11 @@
 ---
 const today = new Date();
+const pathname = Astro.url.pathname;
+const isZh = pathname.startsWith('/zh-tw');
 ---
 
 <footer>
-	Copyright &copy; {today.getFullYear()} Canary Dental All Rights Reserved.
+	&copy; {today.getFullYear()} Canary Dental {isZh ? '版權所有' : 'All Rights Reserved.'}
 </footer>
 <style>
 	footer {

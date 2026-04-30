@@ -73,3 +73,22 @@ const { title, description, image = FallbackImage, lang = 'en' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Canary Dental Clinic",
+  "image": "https://smile-guild.canarydentalsurrey.com/og-image.jpg",
+  "@id": "https://smile-guild.canarydentalsurrey.com",
+  "url": "https://smile-guild.canarydentalsurrey.com",
+  "telephone": "123-456-7890",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Surrey",
+    "addressLocality": "Surrey",
+    "addressRegion": "BC",
+    "postalCode": "V3T",
+    "addressCountry": "CA"
+  }
+})} />
