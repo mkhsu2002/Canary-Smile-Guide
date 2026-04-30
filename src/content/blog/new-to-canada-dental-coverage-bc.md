@@ -2,7 +2,7 @@
 title: 'New to Canada? How to Understand Dental Coverage in BC'
 description: 'A guide for new immigrants in British Columbia to understand how dental insurance, the CDCP, and out-of-pocket costs work at a Canadian dental clinic.'
 pubDate: '2026-04-29'
-heroImage: '../../assets/blog_5.png'
+heroImage: '../../assets/blog_5.jpg'
 ---
 
 Moving to a new country is an exciting adventure, but navigating a completely new healthcare system can be overwhelming. One of the most common surprises for new immigrants arriving in British Columbia is discovering that **dental care is generally not covered by the public healthcare system (MSP).**

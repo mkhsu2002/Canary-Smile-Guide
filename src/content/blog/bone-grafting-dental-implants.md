@@ -2,7 +2,7 @@
 title: 'What Is Bone Grafting Before a Dental Implant?'
 description: 'Told you need a bone graft before getting a dental implant? Learn what bone grafting is, why it is necessary, and what the healing process looks like.'
 pubDate: '2026-04-30'
-heroImage: '../../assets/service_implants.png'
+heroImage: '../../assets/blog_bone_grafting.jpg'
 ---
 
 *Disclaimer: The information provided in this article is for educational purposes only and does not substitute for professional medical or dental advice. Always consult with a qualified dentist regarding your specific condition.*

@@ -6,14 +6,15 @@ import Header from '../components/Header.astro';
 type Props = {
 	title: string;
 	description: string;
+	lang?: string;
 };
 
-const { title, description } = Astro.props;
+const { title, description, lang = 'en' } = Astro.props;
 ---
 
-<html lang="en">
+<html lang={lang}>
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} lang={lang} />
 		<style>
 			main {
 				width: 100%;

@@ -2,7 +2,7 @@
 title: 'Dental Implants vs Dental Bridge: Which Is Better?'
 description: 'Struggling to choose between a dental implant and a dental bridge? Learn the pros, cons, and long-term differences to make the best choice for your smile.'
 pubDate: '2026-04-30'
-heroImage: '../../assets/service_implants.png'
+heroImage: '../../assets/service_implants.jpg'
 ---
 
 *Disclaimer: The information provided in this article is for educational purposes only and does not substitute for professional medical or dental advice. Always consult with a qualified dentist regarding your specific condition.*

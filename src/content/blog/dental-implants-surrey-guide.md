@@ -2,7 +2,7 @@
 title: 'Dental Implants in Surrey: Full Patient Guide'
 description: 'Everything you need to know about getting dental implants in Surrey, BC. From the procedure to the cost, learn how Canary Dental can restore your smile.'
 pubDate: '2026-04-30'
-heroImage: '../../assets/service_implants.png'
+heroImage: '../../assets/blog_implants_guide.jpg'
 ---
 
 *Disclaimer: The information provided in this article is for educational purposes only and does not substitute for professional medical or dental advice. Always consult with a qualified dentist regarding your specific condition.*

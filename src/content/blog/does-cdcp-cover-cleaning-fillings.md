@@ -2,7 +2,7 @@
 title: 'Does CDCP Cover Dental Cleaning, Fillings, or Extractions?'
 description: 'A detailed breakdown of the most common procedures covered by the Canadian Dental Care Plan (CDCP), including cleanings, cavity fillings, and tooth extractions.'
 pubDate: '2026-04-29'
-heroImage: '../../assets/blog_3.png'
+heroImage: '../../assets/blog_3.jpg'
 ---
 
 When patients call our Surrey dental clinic to ask about the Canadian Dental Care Plan (CDCP), the most common questions are almost always: *"Is my cleaning free?"*, *"Will they pay for my cavity?"*, or *"Can I get this painful tooth pulled?"*

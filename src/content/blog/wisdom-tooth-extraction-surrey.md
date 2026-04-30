@@ -2,7 +2,7 @@
 title: 'Wisdom Tooth Pain: Signs You May Need an Extraction in Surrey'
 description: 'Experiencing jaw pain or swollen gums? Learn the top signs that your wisdom teeth are impacted and when you need to see a Surrey emergency dentist.'
 pubDate: '2026-04-30'
-heroImage: '../../assets/service_wisdom.png'
+heroImage: '../../assets/service_wisdom.jpg'
 ---
 
 *Disclaimer: The information provided in this article is for educational purposes only and does not substitute for professional medical or dental advice. Always consult with a qualified dentist regarding your specific condition.*

@@ -2,7 +2,7 @@
 title: 'What to Eat After Tooth Extraction: A Healing Guide'
 description: 'Just had a tooth pulled? Learn the best soft foods to eat, what to avoid, and how to prevent dry socket after a wisdom tooth extraction in Surrey.'
 pubDate: '2026-04-30'
-heroImage: '../../assets/service_wisdom.png'
+heroImage: '../../assets/blog_soft_foods.jpg'
 ---
 
 *Disclaimer: The information provided in this article is for educational purposes only and does not substitute for professional medical or dental advice. Always consult with a qualified dentist regarding your specific condition.*
