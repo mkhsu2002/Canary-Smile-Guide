@@ -24,8 +24,19 @@ const navLinks = {
 
 <header>
 	<nav>
-		<h2><a href={navLinks.home.href}>{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+		<!-- Logo + Language (always visible, even on mobile) -->
+		<div class="nav-brand">
+			<h2><a href={navLinks.home.href}>{SITE_TITLE}</a></h2>
+			<LanguagePicker />
+		</div>
+
+		<!-- Hamburger toggle (mobile only) -->
+		<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+			<span></span><span></span><span></span>
+		</button>
+
+		<!-- Main nav links (collapsible on mobile) -->
+		<div class="nav-links" id="navLinks">
 			<HeaderLink href={navLinks.home.href}>{navLinks.home.text}</HeaderLink>
 			<HeaderLink href={navLinks.cdcp.href}>{navLinks.cdcp.text}</HeaderLink>
 			<div class="dropdown">
@@ -41,27 +52,36 @@ const navLinks = {
 			</div>
 			<HeaderLink href={navLinks.blog.href}>{navLinks.blog.text}</HeaderLink>
 			<a href={navLinks.clinic.href} target="_blank" rel="noopener noreferrer">{navLinks.clinic.text}</a>
-		</div>
-		<div class="social-links">
-			<LanguagePicker />
 			<a href={navLinks.cta.href} target="_blank" class="header-cta">
 				{navLinks.cta.text}
 			</a>
 		</div>
 	</nav>
 </header>
+
+<script>
+	const hamburger = document.getElementById('hamburger');
+	const navLinks = document.getElementById('navLinks');
+	hamburger?.addEventListener('click', () => {
+		navLinks?.classList.toggle('open');
+		hamburger.classList.toggle('active');
+	});
+</script>
+
 <style>
 	header {
 		margin: 0;
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		position: sticky;
+		top: 0;
+		z-index: 100;
 	}
 	h2 {
 		margin: 0;
 		font-size: 1em;
 	}
-
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
@@ -70,6 +90,12 @@ const navLinks = {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.nav-brand {
+		display: flex;
+		align-items: center;
+		gap: 0.8em;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -81,11 +107,15 @@ const navLinks = {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
-	.social-links,
-	.social-links a {
+
+	/* Nav links container */
+	.nav-links {
 		display: flex;
 		align-items: center;
+		gap: 0;
 	}
+
+	/* CTA button */
 	.header-cta {
 		background-color: var(--accent);
 		color: white !important;
@@ -94,11 +124,13 @@ const navLinks = {
 		font-weight: bold;
 		text-decoration: none;
 		border-bottom: none !important;
+		margin-left: 0.5em;
 	}
 	.header-cta:hover {
 		background-color: var(--accent-dark);
 	}
-	/* Dropdown styles */
+
+	/* Dropdown */
 	.dropdown {
 		position: relative;
 		display: inline-block;
@@ -119,7 +151,7 @@ const navLinks = {
 		background-color: #fff;
 		min-width: 200px;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-		z-index: 1;
+		z-index: 10;
 		border-radius: 8px;
 		overflow: hidden;
 	}
@@ -136,9 +168,69 @@ const navLinks = {
 	.dropdown:hover .dropdown-content {
 		display: block;
 	}
+
+	/* Hamburger button (hidden on desktop) */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5em;
+	}
+	.hamburger span {
+		display: block;
+		width: 24px;
+		height: 3px;
+		background: var(--black);
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+	.hamburger.active span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 6px);
+	}
+	.hamburger.active span:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -6px);
+	}
+
+	/* === Mobile === */
 	@media (max-width: 720px) {
-		.social-links {
+		.hamburger {
+			display: flex;
+		}
+		.nav-links {
 			display: none;
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 1em;
+		}
+		.nav-links.open {
+			display: flex;
+		}
+		.nav-links a,
+		.nav-links .dropbtn {
+			width: 100%;
+			text-align: center;
+			padding: 0.8em 0;
+		}
+		.dropdown {
+			width: 100%;
+		}
+		.dropdown-content {
+			position: static;
+			box-shadow: none;
+			border-radius: 0;
+			background: var(--gray-light);
+		}
+		.header-cta {
+			margin: 0.5em auto;
+			display: inline-block;
 		}
 	}
 </style>
+
