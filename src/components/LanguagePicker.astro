@@ -1,0 +1,44 @@
+---
+const { pathname } = Astro.url;
+
+// Determine current language from pathname
+const currentLang = pathname.startsWith('/zh-tw/') || pathname === '/zh-tw' ? 'zh-tw' : 'en';
+
+// Helper to get alternate URL
+const getAlternateUrl = () => {
+    if (currentLang === 'zh-tw') {
+        // Strip /zh-tw/ or /zh-tw from path
+        let newPath = pathname.replace(/^\/zh-tw\/?/, '/');
+        return newPath === '' ? '/' : newPath;
+    } else {
+        // Add /zh-tw/ to path
+        return `/zh-tw${pathname === '/' ? '' : pathname}`;
+    }
+};
+
+const alternateUrl = getAlternateUrl();
+const targetLangText = currentLang === 'en' ? '中文' : 'EN';
+---
+
+<a href={alternateUrl} class="lang-picker">
+  {targetLangText}
+</a>
+
+<style>
+  .lang-picker {
+    margin-right: 1em;
+    padding: 0.4em 0.8em !important;
+    border: 2px solid var(--accent) !important;
+    border-radius: 6px;
+    color: var(--accent) !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .lang-picker:hover {
+    background-color: var(--accent);
+    color: white !important;
+  }
+</style>

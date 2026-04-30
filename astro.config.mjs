@@ -8,4 +8,11 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://smile-guild.canarydentalsurrey.com',
 	integrations: [mdx(), sitemap()],
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en', 'zh-tw'],
+		routing: {
+			prefixDefaultLocale: false,
+		},
+	},
 });

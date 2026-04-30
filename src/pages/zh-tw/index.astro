@@ -1,0 +1,287 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="zh-TW">
+	<head>
+		<BaseHead title="素里中文牙醫 | Canary Smile Guide" description="正在尋找加拿大素里 (Surrey, BC) 值得信賴的家庭牙醫嗎？Canary Dental 提供全方位的牙科照護，從洗牙到植牙，並提供全中文服務。" />
+		<style>
+			main {
+				width: 100%;
+			}
+			/* Hero Section */
+			.hero-section {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 4em 5%;
+				background: linear-gradient(135deg, var(--gray-light) 0%, #ffffff 100%);
+				gap: 3em;
+			}
+			.hero-content {
+				flex: 1;
+				max-width: 600px;
+			}
+			.hero-content h1 {
+				font-size: 3.5em;
+				color: var(--accent);
+				margin-bottom: 0.3em;
+				line-height: 1.2;
+			}
+			.hero-content p {
+				font-size: 1.2em;
+				color: var(--black);
+				margin-bottom: 1.5em;
+				line-height: 1.6;
+			}
+			.hero-image {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+			}
+			.hero-image img {
+				max-width: 100%;
+				border-radius: 20px;
+				box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+			}
+
+			/* Quiz Guide Section */
+			.quiz-section {
+				padding: 5em 5%;
+				background-color: var(--accent);
+				color: white;
+				text-align: center;
+			}
+			.quiz-section h2 {
+				font-size: 2.5em;
+				margin-bottom: 1.5em;
+				color: white;
+			}
+			.quiz-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1.5em;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.quiz-card {
+				background: white;
+				color: var(--black);
+				padding: 2em 1em;
+				border-radius: 12px;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 1.1em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.5em;
+			}
+			.quiz-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+				color: var(--accent);
+			}
+			.quiz-icon {
+				font-size: 2.5em;
+			}
+
+			/* Services Grid Section */
+			.services-section {
+				padding: 5em 5%;
+				background: #ffffff;
+				text-align: center;
+			}
+			.services-section h2 {
+				font-size: 2.5em;
+				color: var(--accent);
+				margin-bottom: 0.5em;
+			}
+			.services-intro {
+				font-size: 1.1em;
+				max-width: 800px;
+				margin: 0 auto 3em auto;
+			}
+			.services-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2em;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.service-card {
+				background: var(--gray-light);
+				padding: 2em;
+				border-radius: 16px;
+				text-align: left;
+				transition: transform 0.3s ease, background 0.3s ease;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				background: #fdf5eb;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+			}
+			.service-card h3 {
+				color: var(--accent);
+				margin-bottom: 0.5em;
+			}
+			.service-card p {
+				color: var(--black);
+				font-size: 0.95em;
+				line-height: 1.5;
+			}
+			.service-card a {
+				display: inline-block;
+				margin-top: 1em;
+				font-weight: bold;
+				color: var(--accent);
+				text-decoration: none;
+			}
+			.service-card a:hover {
+				text-decoration: underline;
+			}
+
+			/* Trust & FAQ */
+			.trust-section {
+				padding: 5em 5%;
+				background: var(--gray-light);
+			}
+			.trust-content {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.faq details {
+				background: white;
+				padding: 1.5em;
+				border-radius: 8px;
+				margin-bottom: 1em;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+			}
+			.faq summary {
+				font-weight: bold;
+				cursor: pointer;
+				font-size: 1.1em;
+				color: var(--black);
+			}
+			.faq p {
+				margin-top: 1em;
+				line-height: 1.6;
+				color: #4a4a4a;
+			}
+
+			@media (max-width: 768px) {
+				.hero-section {
+					flex-direction: column;
+					text-align: center;
+					padding: 3em 5%;
+				}
+				.hero-content h1 {
+					font-size: 2.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<!-- Hero Section -->
+			<section class="hero-section">
+				<div class="hero-content">
+					<h1>您在加拿大素里最值得信賴的口腔健康指南</h1>
+					<p>
+						歡迎來到 Canary Smile Guide —— 由 Canary Dental Clinic 牙科專業團隊建立的免費教育平台。我們的目標是賦予大眾可靠的口腔健康知識，推廣預防性治療，並分享我們的核心理念。我們希望透過教育，在您走進我們診所體驗全方位中英雙語治療之前，就能建立長久的信任，並展現我們對您健康的承諾。
+					</p>
+					<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em; transition: 0.3s;">立即透過 LINE 預約諮詢</a>
+				</div>
+				<div class="hero-image">
+					<img src="/images/hero-bg.jpg" alt="患者在明亮現代的牙科診所中自信微笑" />
+				</div>
+			</section>
+
+			<!-- Quiz Guide Section -->
+			<section class="quiz-section">
+				<h2>今天我們能為您提供什麼協助？</h2>
+				<div class="quiz-grid">
+					<a href="/zh-tw/wisdom-tooth-extraction" class="quiz-card">
+						<img src="/images/icon_toothache.jpg" alt="Emergency" width="48" height="48" />
+						我現在牙齒很痛
+					</a>
+					<a href="/zh-tw/cosmetic-dentist" class="quiz-card">
+						<img src="/images/icon_whitening.jpg" alt="Whitening" width="48" height="48" />
+						我想擁有更燦爛的笑容
+					</a>
+					<a href="/zh-tw/dental-implants" class="quiz-card">
+						<img src="/images/icon_implant.jpg" alt="Implants" width="48" height="48" />
+						我有缺牙的問題
+					</a>
+					<a href="/zh-tw/dental-cleaning" class="quiz-card">
+						<img src="/images/icon_checkup.jpg" alt="Checkup" width="48" height="48" />
+						我需要一般檢查與洗牙
+					</a>
+					<a href="/zh-tw/cdcp-dentist" class="quiz-card">
+						<img src="/images/icon_cdcp.jpg" alt="CDCP" width="48" height="48" />
+						使用 CDCP 加拿大牙醫計畫
+					</a>
+				</div>
+			</section>
+
+			<!-- Services Grid -->
+			<section class="services-section">
+				<h2>全方位牙科服務</h2>
+				<p class="services-intro">我們提供透明、預防導向且以病患為中心的牙科治療。我們位於素里的診所設備齊全，能幫助您達到最佳的口腔健康狀態。</p>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>預防保健 (洗牙與檢查)</h3>
+						<p>全面的口腔檢查、數位 X 光攝影與專業洗牙，保持牙齦健康並預防蛀牙。</p>
+						<a href="/zh-tw/dental-cleaning">了解更多 &rarr;</a>
+					</div>
+					<div class="service-card">
+						<h3>人工植牙</h3>
+						<p>使用頂級 Straumann (士卓曼) BLX 植體，為缺牙提供永久且自然美觀的解決方案。</p>
+						<a href="/zh-tw/dental-implants">了解更多 &rarr;</a>
+					</div>
+					<div class="service-card">
+						<h3>齒顎矯正 (隱適美)</h3>
+						<p>提供成人隱適美 (Invisalign) 隱形牙套，以及需要早期介入治療的兒童傳統矯正。</p>
+						<a href="/zh-tw/invisalign-braces">了解更多 &rarr;</a>
+					</div>
+					<div class="service-card">
+						<h3>口腔外科 (拔智齒)</h3>
+						<p>安全舒適地拔除阻生智齒，縮短恢復期並提供專業的術後護理指導。</p>
+						<a href="/zh-tw/wisdom-tooth-extraction">了解更多 &rarr;</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Trust & FAQ -->
+			<section class="trust-section">
+				<div class="trust-content">
+					<h2 style="text-align:center; color:var(--accent); margin-bottom: 1.5em; font-size: 2.5em;">常見問題 (FAQ)</h2>
+					<div class="faq">
+						<details>
+							<summary>你們目前有接收素里地區的新病患嗎？</summary>
+							<p>有的！我們非常歡迎新病患與家庭加入我們的診所。請立即聯絡我們，安排您首次的全面口腔檢查。</p>
+						</details>
+						<details>
+							<summary>你們接受新的加拿大牙科保健計畫 (CDCP) 嗎？</summary>
+							<p>完全沒問題。我們是註冊的 CDCP 醫療提供者。請在首次就診時攜帶您的 CDCP 卡片與有效身分證件，我們的前台團隊會協助您確認給付額度與範圍。</p>
+						</details>
+						<details>
+							<summary>診所有會說中文的牙醫師嗎？</summary>
+							<p>有的，我們擁有精通中文（國語/普通話）的專屬醫療團隊。我們希望能讓您在沒有任何語言障礙的情況下，完全了解您的治療計畫。 <a href="/zh-tw/mandarin-speaking-dentist" style="color:var(--accent); font-weight:bold;">了解我們的中文服務</a>。</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<Footer />
+	</body>
+</html>
