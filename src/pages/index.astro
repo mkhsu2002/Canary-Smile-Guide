@@ -3,53 +3,65 @@ import LandingPage from '../layouts/LandingPage.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<LandingPage title="Dentist in Surrey, BC | Canary Smile Guide" description={SITE_DESCRIPTION}>
+<LandingPage title="Dentist in Surrey, BC | Canary Smile Guide" description="Looking for a trusted family dentist in Surrey, BC? Canary Dental offers comprehensive care, from cleanings to implants, with English and Mandarin services.">
 	<div class="hero">
-		<h1>Dentist in Surrey, BC</h1>
+		<h1>Dentist in Surrey, BC: Your Trusted Family Dental Clinic</h1>
 		<p class="intro">
-			Welcome to Canary Smile Guide. If you are looking for a gentle, family-friendly dentist in Surrey, BC, you have found the right place. We provide comprehensive dental care ranging from routine check-ups and cleanings to advanced dental implants and Invisalign. Our team speaks English and Mandarin to serve our diverse community.
+			Welcome to Canary Smile Guide. If you are searching for a gentle, modern, and family-friendly dentist in Surrey, BC, you have found the right place. We combine advanced dental technology with compassionate care to provide comprehensive treatments—ranging from routine check-ups and pain-free cleanings to advanced dental implants and Invisalign. Our multicultural team speaks fluent English and Mandarin, ensuring clear communication and a stress-free experience for our diverse Surrey community.
 		</p>
 	</div>
 
 	<section class="content-section">
-		<h2>Our Dental Services</h2>
-		<p>We believe in transparent, stress-free dentistry. Whether you need a simple cleaning, wisdom tooth extraction, or are exploring CDCP coverage, our Surrey dental clinic is equipped to help.</p>
+		<h2>Comprehensive Dental Services Tailored to You</h2>
+		<p>We believe in transparent, preventative, and patient-centered dentistry. Whether you need a simple six-month cleaning, urgent wisdom tooth extraction, or are exploring government CDCP coverage, our Surrey dental clinic is fully equipped with state-of-the-art technology to help you achieve optimal oral health.</p>
 		<ul>
-			<li><strong>Dental Implants:</strong> Permanent solutions for missing teeth using premium Straumann BLX implants.</li>
-			<li><strong>Orthodontics:</strong> Invisalign and traditional braces for both adults and children.</li>
-			<li><strong>General Care:</strong> Exams, cleanings, and CDCP-covered treatments.</li>
+			<li><strong><a href="/dental-cleaning">Preventative Care & Cleanings:</a></strong> Thorough exams, digital X-rays, and professional scaling to keep your gums healthy and prevent cavities.</li>
+			<li><strong><a href="/dental-implants">Dental Implants:</a></strong> Permanent, natural-looking solutions for missing teeth using premium Straumann BLX implants.</li>
+			<li><strong><a href="/invisalign-braces">Orthodontics:</a></strong> Clear Invisalign aligners and traditional braces for both adults seeking a straighter smile and children needing early intervention.</li>
+			<li><strong><a href="/wisdom-tooth-extraction">Oral Surgery & Extractions:</a></strong> Safe and comfortable removal of impacted wisdom teeth with minimal downtime.</li>
+			<li><strong><a href="/cdcp-dentist">CDCP Provider:</a></strong> We proudly accept the Canadian Dental Care Plan to make essential dentistry accessible.</li>
 		</ul>
+	</section>
+
+	<section class="content-section">
+		<h2>Why Choose Canary Dental in Surrey?</h2>
+		<p>We know that visiting the dentist can cause anxiety. That's why we focus on creating a calming environment. Enjoy the convenience of ample free parking, flexible scheduling, and a team that genuinely listens to your concerns. We adhere strictly to the highest infection control standards as recommended by the <a href="https://www.cda-adc.ca/" target="_blank" rel="noopener noreferrer">Canadian Dental Association</a>.</p>
 	</section>
 
 	<section class="content-section">
 		<h2>Frequently Asked Questions</h2>
 		<div class="faq">
 			<details>
+				<summary>Are you currently accepting new patients in Surrey?</summary>
+				<p>Yes, we are warmly welcoming new patients and families to our clinic. Contact us today to schedule your comprehensive initial exam.</p>
+			</details>
+			<details>
 				<summary>Do you accept the new Canadian Dental Care Plan (CDCP)?</summary>
-				<p>Yes! We proudly accept CDCP patients in our Surrey clinic. Contact us to verify your coverage.</p>
+				<p>Absolutely. We are a registered CDCP provider. Please bring your CDCP card and a valid piece of ID to your first appointment, and our front desk will help you verify your coverage.</p>
 			</details>
 			<details>
-				<summary>Do you have Mandarin-speaking dentists?</summary>
-				<p>Absolutely. We have a dedicated team that speaks fluent Mandarin (中文牙醫) to ensure clear communication.</p>
+				<summary>Do you have Mandarin-speaking dentists on staff?</summary>
+				<p>Yes, we have a dedicated team that speaks fluent Mandarin (我們提供全中文牙醫服務). We want you to fully understand your treatment plan without any language barriers.</p>
 			</details>
 			<details>
-				<summary>Are you accepting new patients in Surrey?</summary>
-				<p>Yes, we are currently welcoming new patients and families.</p>
+				<summary>What should I do if I have a dental emergency?</summary>
+				<p>If you are experiencing severe tooth pain, swelling, or a knocked-out tooth, please call us immediately or reach out via LINE. We strive to accommodate dental emergencies as quickly as possible.</p>
 			</details>
 		</div>
 	</section>
 
 	<div class="cta-container">
-		<h2>Ready for a Healthier Smile?</h2>
+		<h2>Ready for a Healthier, Brighter Smile?</h2>
+		<p>Don't delay your oral health. Our friendly team is ready to assist you.</p>
 		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book Your Consultation on LINE</a>
 	</div>
 
 	<section class="content-section">
-		<h2>Related Resources</h2>
+		<h2>Learn More About Your Dental Health</h2>
 		<ul>
-			<li><a href="/cdcp-dentist">CDCP Dental Guide</a></li>
-			<li><a href="/mandarin-speaking-dentist">Mandarin-speaking Dentist Info</a></li>
-			<li><a href="/blog">Dental Care Blog</a></li>
+			<li><a href="/cdcp-dentist">Everything You Need to Know About the CDCP</a></li>
+			<li><a href="/mandarin-speaking-dentist">素里中文牙醫服務介紹 (Mandarin Services)</a></li>
+			<li><a href="/blog">Visit Our Dental Care Blog for Tips and Advice</a></li>
 		</ul>
 	</section>
 </LandingPage>
