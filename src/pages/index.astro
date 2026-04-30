@@ -1,67 +1,287 @@
 ---
-import LandingPage from '../layouts/LandingPage.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<LandingPage title="Dentist in Surrey, BC | Canary Smile Guide" description="Looking for a trusted family dentist in Surrey, BC? Canary Dental offers comprehensive care, from cleanings to implants, with English and Mandarin services.">
-	<div class="hero">
-		<h1>Dentist in Surrey, BC: Your Trusted Family Dental Clinic</h1>
-		<p class="intro">
-			Welcome to Canary Smile Guide. If you are searching for a gentle, modern, and family-friendly dentist in Surrey, BC, you have found the right place. We combine advanced dental technology with compassionate care to provide comprehensive treatments—ranging from routine check-ups and pain-free cleanings to advanced dental implants and Invisalign. Our multicultural team speaks fluent English and Mandarin, ensuring clear communication and a stress-free experience for our diverse Surrey community.
-		</p>
-	</div>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Dentist in Surrey, BC | Canary Smile Guide" description="Looking for a trusted family dentist in Surrey, BC? Canary Dental offers comprehensive care, from cleanings to implants, with English and Mandarin services." />
+		<style>
+			main {
+				width: 100%;
+			}
+			/* Hero Section */
+			.hero-section {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 4em 5%;
+				background: linear-gradient(135deg, var(--gray-light) 0%, #ffffff 100%);
+				gap: 3em;
+			}
+			.hero-content {
+				flex: 1;
+				max-width: 600px;
+			}
+			.hero-content h1 {
+				font-size: 3.5em;
+				color: var(--accent);
+				margin-bottom: 0.3em;
+				line-height: 1.1;
+			}
+			.hero-content p {
+				font-size: 1.2em;
+				color: var(--black);
+				margin-bottom: 1.5em;
+				line-height: 1.6;
+			}
+			.hero-image {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+			}
+			.hero-image img {
+				max-width: 100%;
+				border-radius: 20px;
+				box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+			}
 
-	<section class="content-section">
-		<h2>Comprehensive Dental Services Tailored to You</h2>
-		<p>We believe in transparent, preventative, and patient-centered dentistry. Whether you need a simple six-month cleaning, urgent wisdom tooth extraction, or are exploring government CDCP coverage, our Surrey dental clinic is fully equipped with state-of-the-art technology to help you achieve optimal oral health.</p>
-		<ul>
-			<li><strong><a href="/dental-cleaning">Preventative Care & Cleanings:</a></strong> Thorough exams, digital X-rays, and professional scaling to keep your gums healthy and prevent cavities.</li>
-			<li><strong><a href="/dental-implants">Dental Implants:</a></strong> Permanent, natural-looking solutions for missing teeth using premium Straumann BLX implants.</li>
-			<li><strong><a href="/invisalign-braces">Orthodontics:</a></strong> Clear Invisalign aligners and traditional braces for both adults seeking a straighter smile and children needing early intervention.</li>
-			<li><strong><a href="/wisdom-tooth-extraction">Oral Surgery & Extractions:</a></strong> Safe and comfortable removal of impacted wisdom teeth with minimal downtime.</li>
-			<li><strong><a href="/cdcp-dentist">CDCP Provider:</a></strong> We proudly accept the Canadian Dental Care Plan to make essential dentistry accessible.</li>
-		</ul>
-	</section>
+			/* Quiz Guide Section */
+			.quiz-section {
+				padding: 5em 5%;
+				background-color: var(--accent);
+				color: white;
+				text-align: center;
+			}
+			.quiz-section h2 {
+				font-size: 2.5em;
+				margin-bottom: 1.5em;
+				color: white;
+			}
+			.quiz-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1.5em;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.quiz-card {
+				background: white;
+				color: var(--black);
+				padding: 2em 1em;
+				border-radius: 12px;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 1.1em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.5em;
+			}
+			.quiz-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+				color: var(--accent);
+			}
+			.quiz-icon {
+				font-size: 2.5em;
+			}
 
-	<section class="content-section">
-		<h2>Why Choose Canary Dental in Surrey?</h2>
-		<p>We know that visiting the dentist can cause anxiety. That's why we focus on creating a calming environment. Enjoy the convenience of ample free parking, flexible scheduling, and a team that genuinely listens to your concerns. We adhere strictly to the highest infection control standards as recommended by the <a href="https://www.cda-adc.ca/" target="_blank" rel="noopener noreferrer">Canadian Dental Association</a>.</p>
-	</section>
+			/* Services Grid Section */
+			.services-section {
+				padding: 5em 5%;
+				background: #ffffff;
+				text-align: center;
+			}
+			.services-section h2 {
+				font-size: 2.5em;
+				color: var(--accent);
+				margin-bottom: 0.5em;
+			}
+			.services-intro {
+				font-size: 1.1em;
+				max-width: 800px;
+				margin: 0 auto 3em auto;
+			}
+			.services-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2em;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.service-card {
+				background: var(--gray-light);
+				padding: 2em;
+				border-radius: 16px;
+				text-align: left;
+				transition: transform 0.3s ease, background 0.3s ease;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				background: #fdf5eb; /* Soft canary yellow tint */
+				box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+			}
+			.service-card h3 {
+				color: var(--accent);
+				margin-bottom: 0.5em;
+			}
+			.service-card p {
+				color: var(--black);
+				font-size: 0.95em;
+				line-height: 1.5;
+			}
+			.service-card a {
+				display: inline-block;
+				margin-top: 1em;
+				font-weight: bold;
+				color: var(--accent);
+				text-decoration: none;
+			}
+			.service-card a:hover {
+				text-decoration: underline;
+			}
 
-	<section class="content-section">
-		<h2>Frequently Asked Questions</h2>
-		<div class="faq">
-			<details>
-				<summary>Are you currently accepting new patients in Surrey?</summary>
-				<p>Yes, we are warmly welcoming new patients and families to our clinic. Contact us today to schedule your comprehensive initial exam.</p>
-			</details>
-			<details>
-				<summary>Do you accept the new Canadian Dental Care Plan (CDCP)?</summary>
-				<p>Absolutely. We are a registered CDCP provider. Please bring your CDCP card and a valid piece of ID to your first appointment, and our front desk will help you verify your coverage.</p>
-			</details>
-			<details>
-				<summary>Do you have Mandarin-speaking dentists on staff?</summary>
-				<p>Yes, we have a dedicated team that speaks fluent Mandarin (我們提供全中文牙醫服務). We want you to fully understand your treatment plan without any language barriers.</p>
-			</details>
-			<details>
-				<summary>What should I do if I have a dental emergency?</summary>
-				<p>If you are experiencing severe tooth pain, swelling, or a knocked-out tooth, please call us immediately or reach out via LINE. We strive to accommodate dental emergencies as quickly as possible.</p>
-			</details>
-		</div>
-	</section>
+			/* Trust & FAQ */
+			.trust-section {
+				padding: 5em 5%;
+				background: var(--gray-light);
+			}
+			.trust-content {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.faq details {
+				background: white;
+				padding: 1.5em;
+				border-radius: 8px;
+				margin-bottom: 1em;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+			}
+			.faq summary {
+				font-weight: bold;
+				cursor: pointer;
+				font-size: 1.1em;
+				color: var(--black);
+			}
+			.faq p {
+				margin-top: 1em;
+				line-height: 1.6;
+				color: #4a4a4a;
+			}
 
-	<div class="cta-container">
-		<h2>Ready for a Healthier, Brighter Smile?</h2>
-		<p>Don't delay your oral health. Our friendly team is ready to assist you.</p>
-		<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" target="_blank">Book Your Consultation on LINE</a>
-	</div>
+			@media (max-width: 768px) {
+				.hero-section {
+					flex-direction: column;
+					text-align: center;
+					padding: 3em 5%;
+				}
+				.hero-content h1 {
+					font-size: 2.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<!-- Hero Section -->
+			<section class="hero-section">
+				<div class="hero-content">
+					<h1>Your Trusted Family Dentist in Surrey, BC</h1>
+					<p>
+						Welcome to Canary Smile Guide. We combine advanced dental technology with compassionate care to provide comprehensive treatments—ranging from pain-free cleanings to advanced dental implants. Our multicultural team speaks fluent English and Mandarin.
+					</p>
+					<a href="https://line.me/ti/p/4RpjC2r6Hq" class="cta-button" style="display:inline-block; background:var(--accent); color:white; padding:1em 2em; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1em; transition: 0.3s;">Book Your Consultation</a>
+				</div>
+				<div class="hero-image">
+					<img src="/images/hero-bg.png" alt="Happy patient smiling confidently in a bright modern dental clinic" />
+				</div>
+			</section>
 
-	<section class="content-section">
-		<h2>Learn More About Your Dental Health</h2>
-		<ul>
-			<li><a href="/cdcp-dentist">Everything You Need to Know About the CDCP</a></li>
-			<li><a href="/mandarin-speaking-dentist">素里中文牙醫服務介紹 (Mandarin Services)</a></li>
-			<li><a href="/blog">Visit Our Dental Care Blog for Tips and Advice</a></li>
-		</ul>
-	</section>
-</LandingPage>
+			<!-- Quiz Guide Section -->
+			<section class="quiz-section">
+				<h2>What can we help you with today?</h2>
+				<div class="quiz-grid">
+					<a href="/wisdom-tooth-extraction" class="quiz-card">
+						<span class="quiz-icon">🚨</span>
+						I'm in pain right now
+					</a>
+					<a href="/cosmetic-dentist" class="quiz-card">
+						<span class="quiz-icon">✨</span>
+						I want a brighter smile
+					</a>
+					<a href="/dental-implants" class="quiz-card">
+						<span class="quiz-icon">🦷</span>
+						I'm missing a tooth
+					</a>
+					<a href="/dental-cleaning" class="quiz-card">
+						<span class="quiz-icon">📅</span>
+						I need a check-up
+					</a>
+					<a href="/cdcp-dentist" class="quiz-card">
+						<span class="quiz-icon">🇨🇦</span>
+						Use CDCP benefits
+					</a>
+				</div>
+			</section>
+
+			<!-- Services Grid -->
+			<section class="services-section">
+				<h2>Comprehensive Dental Services</h2>
+				<p class="services-intro">We provide transparent, preventative, and patient-centered dentistry. Our Surrey clinic is fully equipped to help you achieve optimal oral health.</p>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>Preventative Care</h3>
+						<p>Thorough exams, digital X-rays, and professional scaling to keep your gums healthy and prevent cavities.</p>
+						<a href="/dental-cleaning">Learn more &rarr;</a>
+					</div>
+					<div class="service-card">
+						<h3>Dental Implants</h3>
+						<p>Permanent, natural-looking solutions for missing teeth using premium Straumann BLX implants.</p>
+						<a href="/dental-implants">Learn more &rarr;</a>
+					</div>
+					<div class="service-card">
+						<h3>Orthodontics</h3>
+						<p>Clear Invisalign aligners and traditional braces for both adults and children needing early intervention.</p>
+						<a href="/invisalign-braces">Learn more &rarr;</a>
+					</div>
+					<div class="service-card">
+						<h3>Oral Surgery</h3>
+						<p>Safe and comfortable removal of impacted wisdom teeth with minimal downtime and expert aftercare.</p>
+						<a href="/wisdom-tooth-extraction">Learn more &rarr;</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Trust & FAQ -->
+			<section class="trust-section">
+				<div class="trust-content">
+					<h2 style="text-align:center; color:var(--accent); margin-bottom: 1.5em; font-size: 2.5em;">Frequently Asked Questions</h2>
+					<div class="faq">
+						<details>
+							<summary>Are you currently accepting new patients in Surrey?</summary>
+							<p>Yes, we are warmly welcoming new patients and families to our clinic. Contact us today to schedule your comprehensive initial exam.</p>
+						</details>
+						<details>
+							<summary>Do you accept the new Canadian Dental Care Plan (CDCP)?</summary>
+							<p>Absolutely. We are a registered CDCP provider. Please bring your CDCP card and a valid piece of ID to your first appointment, and our front desk will help you verify your coverage.</p>
+						</details>
+						<details>
+							<summary>Do you have Mandarin-speaking dentists on staff?</summary>
+							<p>Yes, we have a dedicated team that speaks fluent Mandarin (我們提供全中文牙醫服務). We want you to fully understand your treatment plan without any language barriers. <a href="/mandarin-speaking-dentist" style="color:var(--accent); font-weight:bold;">Learn more</a>.</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<Footer />
+	</body>
+</html>
