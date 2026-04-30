@@ -5,26 +5,62 @@ const isZh = pathname.startsWith('/zh-tw');
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Canary Dental {isZh ? '版權所有' : 'All Rights Reserved.'}
+	<div class="footer-info">
+		<p class="footer-name">Canary Dental Clinic</p>
+		<p>📍 <a href="https://maps.google.com/?q=14920+104+Ave,+Surrey,+BC+V3R+1M7" target="_blank" rel="noopener noreferrer">14920 104 Ave, Surrey, BC V3R 1M7</a></p>
+		<p>📞 <a href="tel:+16044960392">(604) 496-0392</a></p>
+		<p>✉️ <a href="mailto:canary.dental.surrey@gmail.com">canary.dental.surrey@gmail.com</a></p>
+		<p>🕤 {isZh ? '營業時間：週一至週日 9:30 AM – 6:00 PM' : 'Hours: Mon–Sun 9:30 AM – 6:00 PM'}</p>
+		<div class="footer-links">
+			<a href="https://www.canarydentalsurrey.com/" target="_blank" rel="noopener noreferrer">{isZh ? '🌐 診所官網' : '🌐 Main Clinic Website'}</a>
+			<span>|</span>
+			<a href="https://line.me/ti/p/4RpjC2r6Hq" target="_blank" rel="noopener noreferrer">{isZh ? '💬 LINE 預約' : '💬 Book via LINE'}</a>
+		</div>
+	</div>
+	<p class="copyright">&copy; {today.getFullYear()} Canary Dental {isZh ? '版權所有' : 'All Rights Reserved.'}</p>
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
+		padding: 2em 1em 4em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
 	}
-	.social-links {
+	.footer-info {
+		max-width: 480px;
+		margin: 0 auto 1.5em;
+	}
+	.footer-name {
+		font-weight: 700;
+		font-size: 1.15em;
+		margin-bottom: 0.5em;
+		color: rgb(var(--gray-dark));
+	}
+	.footer-info p {
+		margin: 0.3em 0;
+		font-size: 0.95em;
+	}
+	.footer-info a {
+		color: rgb(var(--gray));
+		text-decoration: none;
+	}
+	.footer-info a:hover {
+		color: rgb(var(--accent));
+		text-decoration: underline;
+	}
+	.footer-links {
+		margin-top: 0.8em;
 		display: flex;
 		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
+		gap: 0.6em;
+		font-size: 0.95em;
 	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
+	.footer-links span {
+		opacity: 0.4;
 	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
+	.copyright {
+		margin-top: 1.5em;
+		font-size: 0.85em;
+		opacity: 0.7;
 	}
 </style>
