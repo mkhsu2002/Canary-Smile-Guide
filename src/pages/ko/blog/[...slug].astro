@@ -4,9 +4,9 @@ import BlogPost from '../../../layouts/BlogPost.astro';
 import { getLocalizedPostSlug, getPostLocale } from '../../../utils/i18n';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog', (post) => getPostLocale(post) === 'zh-tw');
+	const posts = await getCollection('blog', (post) => getPostLocale(post) === 'ko');
 	return posts.map((post) => ({
-		params: { slug: getLocalizedPostSlug(post.id, 'zh-tw') },
+		params: { slug: getLocalizedPostSlug(post.id, 'ko') },
 		props: post,
 	}));
 }

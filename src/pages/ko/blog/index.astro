@@ -9,14 +9,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
 import { getLocalizedPostSlug, getPostLocale } from '../../../utils/i18n';
 
 const posts = (await getCollection('blog'))
-	.filter((post) => getPostLocale(post) === 'zh-tw')
+	.filter((post) => getPostLocale(post) === 'ko')
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
-<html lang="zh-TW">
+<html lang="ko">
 	<head>
-		<BaseHead title={`部落格 | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<BaseHead title={`블로그 | ${SITE_TITLE}`} description="Canary Dental의 한국어 치과 가이드와 Surrey 진료 정보를 모아보세요." />
 		<style>
 			main {
 				width: 960px;
@@ -92,13 +92,13 @@ const posts = (await getCollection('blog'))
 		<main>
 			<section>
 				{posts.length === 0 ? (
-					<p style="text-align:center; padding: 2em; color: var(--gray);">目前尚無中文文章，敬請期待！</p>
+					<p style="text-align:center; padding: 2em; color: var(--gray);">아직 등록된 한국어 글이 없습니다.</p>
 				) : (
 					<ul>
 						{
 							posts.map((post) => (
 								<li>
-									<a href={`/zh-tw/blog/${getLocalizedPostSlug(post.id, 'zh-tw')}/`}>
+									<a href={`/ko/blog/${getLocalizedPostSlug(post.id, 'ko')}/`}>
 										{post.data.heroImage && (
 											<Image width={720} height={360} src={post.data.heroImage} alt="" />
 										)}

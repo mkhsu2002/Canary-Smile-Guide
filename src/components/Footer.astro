@@ -1,8 +1,31 @@
 ---
+import { getLocaleFromPathname, type Locale } from '../utils/i18n';
+
 const today = new Date();
 const pathname = Astro.url.pathname;
-const isZh = pathname.startsWith('/zh-tw');
-const hideHoursOnHome = pathname === '/' || pathname === '/zh-tw/';
+const locale = getLocaleFromPathname(pathname);
+const hideHoursOnHome = pathname === '/' || pathname === '/zh-tw/' || pathname === '/ko/';
+
+const footerText: Record<Locale, { hours: string; website: string; line: string; copyright: string }> = {
+	en: {
+		hours: 'Hours: Mon–Sun 9:30 AM – 6:00 PM',
+		website: '🌐 Main Clinic Website',
+		line: '💬 Book via LINE',
+		copyright: 'All Rights Reserved.',
+	},
+	'zh-tw': {
+		hours: '營業時間：週一至週日 9:30 AM – 6:00 PM',
+		website: '🌐 診所官網',
+		line: '💬 LINE 預約',
+		copyright: '版權所有',
+	},
+	ko: {
+		hours: '진료 시간: 월요일~일요일 오전 9:30 - 오후 6:00',
+		website: '🌐 본원 홈페이지',
+		line: '💬 LINE 예약',
+		copyright: 'All Rights Reserved.',
+	},
+};
 ---
 
 <footer>
@@ -12,15 +35,15 @@ const hideHoursOnHome = pathname === '/' || pathname === '/zh-tw/';
 		<p>📞 <a href="tel:+16044960392">(604) 496-0392</a></p>
 		<p>✉️ <a href="mailto:canary.dental.surrey@gmail.com">canary.dental.surrey@gmail.com</a></p>
 		{!hideHoursOnHome && (
-			<p>🕤 {isZh ? '營業時間：週一至週日 9:30 AM – 6:00 PM' : 'Hours: Mon–Sun 9:30 AM – 6:00 PM'}</p>
+			<p>🕤 {footerText[locale].hours}</p>
 		)}
 		<div class="footer-links">
-			<a href="https://www.canarydentalsurrey.com/" target="_blank" rel="noopener noreferrer">{isZh ? '🌐 診所官網' : '🌐 Main Clinic Website'}</a>
+			<a href="https://www.canarydentalsurrey.com/" target="_blank" rel="noopener noreferrer">{footerText[locale].website}</a>
 			<span>|</span>
-			<a href="https://line.me/ti/p/4RpjC2r6Hq" target="_blank" rel="noopener noreferrer">{isZh ? '💬 LINE 預約' : '💬 Book via LINE'}</a>
+			<a href="https://line.me/ti/p/4RpjC2r6Hq" target="_blank" rel="noopener noreferrer">{footerText[locale].line}</a>
 		</div>
 	</div>
-	<p class="copyright">&copy; {today.getFullYear()} Canary Dental {isZh ? '版權所有' : 'All Rights Reserved.'}</p>
+	<p class="copyright">&copy; {today.getFullYear()} Canary Dental {footerText[locale].copyright}</p>
 </footer>
 <style>
 	footer {

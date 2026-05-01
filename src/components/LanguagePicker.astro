@@ -1,44 +1,47 @@
 ---
+import { LOCALES, LOCALE_LABELS, getLocaleFromPathname, localizePath } from '../utils/i18n';
+
 const { pathname } = Astro.url;
-
-// Determine current language from pathname
-const currentLang = pathname.startsWith('/zh-tw/') || pathname === '/zh-tw' ? 'zh-tw' : 'en';
-
-// Helper to get alternate URL
-const getAlternateUrl = () => {
-    if (currentLang === 'zh-tw') {
-        // Strip /zh-tw/ or /zh-tw from path
-        let newPath = pathname.replace(/^\/zh-tw\/?/, '/');
-        return newPath === '' ? '/' : newPath;
-    } else {
-        // Add /zh-tw/ to path
-        return `/zh-tw${pathname === '/' ? '' : pathname}`;
-    }
-};
-
-const alternateUrl = getAlternateUrl();
-const targetLangText = currentLang === 'en' ? '中文' : 'EN';
+const currentLang = getLocaleFromPathname(pathname);
 ---
 
-<a href={alternateUrl} class="lang-picker">
-  {targetLangText}
-</a>
+<div class="lang-picker" aria-label="Language picker">
+	{
+		LOCALES.map((locale) => (
+			<a
+				href={localizePath(pathname, locale)}
+				class:list={['lang-link', { active: locale === currentLang }]}
+				aria-current={locale === currentLang ? 'page' : undefined}
+			>
+				{LOCALE_LABELS[locale]}
+			</a>
+		))
+	}
+</div>
 
 <style>
-  .lang-picker {
-    margin-right: 1em;
-    padding: 0.4em 0.8em !important;
-    border: 2px solid var(--accent) !important;
-    border-radius: 6px;
-    color: var(--accent) !important;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .lang-picker:hover {
-    background-color: var(--accent);
-    color: white !important;
-  }
+	.lang-picker {
+		display: flex;
+		align-items: center;
+		gap: 0.4em;
+		margin-right: 1em;
+	}
+
+	.lang-link {
+		padding: 0.4em 0.8em !important;
+		border: 2px solid var(--accent) !important;
+		border-radius: 999px;
+		color: var(--accent) !important;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 0.9em;
+		line-height: 1;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.lang-link:hover,
+	.lang-link.active {
+		background-color: var(--accent);
+		color: white !important;
+	}
 </style>

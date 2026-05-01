@@ -5,10 +5,16 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import type { Locale } from '../utils/i18n';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, lang = 'en' } = Astro.props;
+const updatedText: Record<Locale, string> = {
+	en: 'Last updated on',
+	'zh-tw': '最後更新於',
+	ko: '마지막 업데이트',
+};
 ---
 
 <html lang={lang}>
@@ -69,7 +75,7 @@ const { title, description, pubDate, updatedDate, heroImage, lang = 'en' } = Ast
 							{
 								updatedDate && (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										{updatedText[lang as Locale]} <FormattedDate date={updatedDate} />
 									</div>
 								)
 							}

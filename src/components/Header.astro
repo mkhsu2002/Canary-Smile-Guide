@@ -2,23 +2,69 @@
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 import LanguagePicker from './LanguagePicker.astro';
+import { getLocaleFromPathname, localizePath, type Locale } from '../utils/i18n';
 
 const pathname = Astro.url.pathname;
-const isZh = pathname.startsWith('/zh-tw');
+const locale = getLocaleFromPathname(pathname);
+
+const navText: Record<Locale, Record<string, string>> = {
+	en: {
+		home: 'Home',
+		cdcp: 'CDCP Guide',
+		services: 'Services',
+		implants: 'Dental Implants',
+		braces: 'Invisalign & Braces',
+		cleaning: 'Cleaning & Exam',
+		extraction: 'Tooth Extraction',
+		cosmetic: 'Cosmetic Dentistry',
+		languageCare: 'Chinese & Korean Care',
+		blog: 'Blog',
+		clinic: 'Main Clinic',
+		cta: 'Book via LINE',
+	},
+	'zh-tw': {
+		home: '首頁',
+		cdcp: 'CDCP 牙醫',
+		services: '醫療服務',
+		implants: '人工植牙',
+		braces: '隱適美與矯正',
+		cleaning: '洗牙與檢查',
+		extraction: '拔智齒',
+		cosmetic: '美容牙科',
+		languageCare: '中文與韓語服務',
+		blog: '部落格',
+		clinic: '診所官網',
+		cta: 'LINE 預約',
+	},
+	ko: {
+		home: '홈',
+		cdcp: 'CDCP 안내',
+		services: '진료 서비스',
+		implants: '임플란트',
+		braces: '인비절라인·교정',
+		cleaning: '스케일링·검진',
+		extraction: '발치',
+		cosmetic: '심미치과',
+		languageCare: '한국어·중국어 상담',
+		blog: '블로그',
+		clinic: '본원 홈페이지',
+		cta: 'LINE 예약',
+	},
+};
 
 const navLinks = {
-	home: { text: isZh ? '首頁' : 'Home', href: isZh ? '/zh-tw/' : '/' },
-	cdcp: { text: isZh ? 'CDCP 牙醫' : 'CDCP Guide', href: isZh ? '/zh-tw/cdcp-dentist' : '/cdcp-dentist' },
-	services: { text: isZh ? '醫療服務' : 'Services' },
-	implants: { text: isZh ? '人工植牙' : 'Dental Implants', href: isZh ? '/zh-tw/dental-implants' : '/dental-implants' },
-	braces: { text: isZh ? '隱適美與矯正' : 'Invisalign & Braces', href: isZh ? '/zh-tw/invisalign-braces' : '/invisalign-braces' },
-	cleaning: { text: isZh ? '洗牙與檢查' : 'Cleaning & Exam', href: isZh ? '/zh-tw/dental-cleaning' : '/dental-cleaning' },
-	extraction: { text: isZh ? '拔智齒' : 'Tooth Extraction', href: isZh ? '/zh-tw/wisdom-tooth-extraction' : '/wisdom-tooth-extraction' },
-	cosmetic: { text: isZh ? '美容牙科' : 'Cosmetic Dentistry', href: isZh ? '/zh-tw/cosmetic-dentist' : '/cosmetic-dentist' },
-	mandarin: { text: '中文牙醫服務', href: isZh ? '/zh-tw/mandarin-speaking-dentist' : '/mandarin-speaking-dentist' },
-	blog: { text: isZh ? '部落格' : 'Blog', href: isZh ? '/zh-tw/blog' : '/blog' },
-	clinic: { text: isZh ? '診所官網' : 'Main Clinic', href: 'https://www.canarydentalsurrey.com/' },
-	cta: { text: isZh ? 'LINE 預約' : 'Book via LINE', href: 'https://line.me/ti/p/4RpjC2r6Hq' },
+	home: { text: navText[locale].home, href: localizePath('/', locale) },
+	cdcp: { text: navText[locale].cdcp, href: localizePath('/cdcp-dentist', locale) },
+	services: { text: navText[locale].services },
+	implants: { text: navText[locale].implants, href: localizePath('/dental-implants', locale) },
+	braces: { text: navText[locale].braces, href: localizePath('/invisalign-braces', locale) },
+	cleaning: { text: navText[locale].cleaning, href: localizePath('/dental-cleaning', locale) },
+	extraction: { text: navText[locale].extraction, href: localizePath('/wisdom-tooth-extraction', locale) },
+	cosmetic: { text: navText[locale].cosmetic, href: localizePath('/cosmetic-dentist', locale) },
+	mandarin: { text: navText[locale].languageCare, href: localizePath('/mandarin-speaking-dentist', locale) },
+	blog: { text: navText[locale].blog, href: localizePath('/blog', locale) },
+	clinic: { text: navText[locale].clinic, href: 'https://www.canarydentalsurrey.com/' },
+	cta: { text: navText[locale].cta, href: 'https://line.me/ti/p/4RpjC2r6Hq' },
 };
 ---
 
@@ -233,4 +279,3 @@ const navLinks = {
 		}
 	}
 </style>
-
