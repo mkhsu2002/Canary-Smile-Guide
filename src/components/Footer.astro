@@ -2,6 +2,7 @@
 const today = new Date();
 const pathname = Astro.url.pathname;
 const isZh = pathname.startsWith('/zh-tw');
+const hideHoursOnHome = pathname === '/' || pathname === '/zh-tw/';
 ---
 
 <footer>
@@ -10,7 +11,9 @@ const isZh = pathname.startsWith('/zh-tw');
 		<p>📍 <a href="https://maps.google.com/?q=14920+104+Ave,+Surrey,+BC+V3R+1M7" target="_blank" rel="noopener noreferrer">14920 104 Ave, Surrey, BC V3R 1M7</a></p>
 		<p>📞 <a href="tel:+16044960392">(604) 496-0392</a></p>
 		<p>✉️ <a href="mailto:canary.dental.surrey@gmail.com">canary.dental.surrey@gmail.com</a></p>
-		<p>🕤 {isZh ? '營業時間：週一至週日 9:30 AM – 6:00 PM' : 'Hours: Mon–Sun 9:30 AM – 6:00 PM'}</p>
+		{!hideHoursOnHome && (
+			<p>🕤 {isZh ? '營業時間：週一至週日 9:30 AM – 6:00 PM' : 'Hours: Mon–Sun 9:30 AM – 6:00 PM'}</p>
+		)}
 		<div class="footer-links">
 			<a href="https://www.canarydentalsurrey.com/" target="_blank" rel="noopener noreferrer">{isZh ? '🌐 診所官網' : '🌐 Main Clinic Website'}</a>
 			<span>|</span>
